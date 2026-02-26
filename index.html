@@ -16,6 +16,25 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://winlab.ca" />
 
+  <!-- LocalBusiness Schema (ayuda a Google, pero no garantiza estrellas en resultados) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Winlab",
+    "telephone":"+1-450-209-7144",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"275 Rue Western",
+      "addressLocality":"Waterloo",
+      "addressRegion":"QC",
+      "addressCountry":"CA"
+    },
+    "openingHours":"Mo-Su 08:00-20:00",
+    "url":"https://winlab.ca"
+  }
+  </script>
+
   <style>
     :root{
       --bg:#0b0f1a;
@@ -44,9 +63,7 @@
       display:flex; align-items:center; justify-content:space-between; gap:14px;
       padding:10px 0 22px;
     }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-    }
+    .brand{display:flex; align-items:center; gap:12px;}
     .logo{
       width:44px; height:44px; border-radius:12px;
       background: linear-gradient(135deg, var(--accent), rgba(35,196,131,.9));
@@ -55,17 +72,16 @@
     .brand h1{margin:0; font-size:18px; letter-spacing:.3px;}
     .brand p{margin:0; color:var(--muted); font-size:12px;}
 
-    /* --- Language flags --- */
-    .lang{
-      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
-    }
+    /* Language flags */
+    .lang{display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
     .lang button{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
       width:44px;
       height:32px;
       padding:0;
       border-radius:10px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.06);
       cursor:pointer;
       display:flex;
       align-items:center;
@@ -79,12 +95,9 @@
       display:block;
     }
     .lang button.active{
-      border-color: rgba(79,140,255,.85);
-      box-shadow: 0 0 0 3px rgba(79,140,255,.22);
-    }
-    .lang button:focus-visible{
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(79,140,255,.35);
+      outline:2px solid rgba(79,140,255,.75);
+      outline-offset:2px;
+      border-color: rgba(79,140,255,.65);
     }
 
     .hero{
@@ -114,6 +127,26 @@
     }
     .heroMain h2{ margin:12px 0 10px; font-size:34px; line-height:1.12;}
     .heroMain p{ margin:0; color:var(--muted); font-size:15px; line-height:1.55; max-width:65ch;}
+
+    .ratingRow{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .stars{
+      letter-spacing:1px;
+      color:#ffd66b;
+      font-size:14px;
+    }
+    .ratingRow a{
+      text-decoration:none;
+      border-bottom:1px dashed rgba(255,255,255,.25);
+    }
+
     .ctaRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
@@ -124,14 +157,9 @@
       text-decoration:none;
       font-weight:700;
     }
-    .btn.primary{
-      background: rgba(79,140,255,.28);
-      border-color: rgba(79,140,255,.65);
-    }
-    .btn.whatsapp{
-      background: rgba(35,196,131,.18);
-      border-color: rgba(35,196,131,.55);
-    }
+    .btn.primary{ background: rgba(79,140,255,.28); border-color: rgba(79,140,255,.65); }
+    .btn.whatsapp{ background: rgba(35,196,131,.18); border-color: rgba(35,196,131,.55); }
+
     .mini{
       display:grid; gap:10px; padding:16px;
       grid-template-columns:1fr;
@@ -144,6 +172,7 @@
     }
     .pill strong{display:block; font-size:13px;}
     .pill span{display:block; color:var(--muted); font-size:13px; margin-top:4px;}
+
     .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -193,15 +222,15 @@
         </div>
       </div>
 
-      <!-- Flags -->
+      <!-- Bandera/idioma -->
       <div class="lang" aria-label="Language selector">
-        <button class="active" data-lang="fr" title="Français" aria-label="Français">
+        <button class="active" data-lang="fr" aria-label="Français" title="Français">
           <img src="images/Francais.webp" alt="Français">
         </button>
-        <button data-lang="es" title="Español" aria-label="Español">
-          <img src="images/espanol.webp" alt="Español">
+        <button data-lang="es" aria-label="Español" title="Español">
+          <img src="images/espagnol.webp" alt="Español">
         </button>
-        <button data-lang="en" title="English" aria-label="English">
+        <button data-lang="en" aria-label="English" title="English">
           <img src="images/anglais.webp" alt="English">
         </button>
       </div>
@@ -215,6 +244,15 @@
           Winlab vend, achète et répare des cellulaires, et répare aussi les consoles de jeux.
           Passez nous voir ou écrivez-nous sur WhatsApp.
         </p>
+
+        <!-- Estrellas visibles en tu web -->
+        <div class="ratingRow">
+          <span><strong>5.0</strong></span>
+          <span class="stars" aria-label="5 étoiles">★★★★★</span>
+          <a id="reviewLink" target="_blank" rel="noopener" href="https://g.page/r/CYQW_tWEHGkKEBM/review">
+            (2 avis Google)
+          </a>
+        </div>
 
         <div class="ctaRow">
           <a class="btn primary" id="callBtn" href="tel:+14502097144">📞 Appeler</a>
@@ -363,12 +401,15 @@
 
       document.getElementById("foot").textContent = d.foot;
 
+      // Update WhatsApp text
       const waLink = "https://wa.me/14502097144?text=" + encodeURIComponent(d.waText);
       document.getElementById("waBtn").href = waLink;
       document.querySelector(".fab").href = waLink;
 
+      // Save preference
       localStorage.setItem("winlab_lang", lang);
 
+      // Toggle active buttons
       document.querySelectorAll(".lang button").forEach(b=>{
         b.classList.toggle("active", b.dataset.lang === lang);
       });
