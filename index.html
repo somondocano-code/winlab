@@ -16,14 +16,21 @@
   --radius:18px;
   --max:1050px;
 }
+
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
   color:var(--text);
   background:var(--bg);
 }
-.wrap{max-width:var(--max);margin:auto;padding:24px;}
+
+.wrap{
+  max-width:var(--max);
+  margin:auto;
+  padding:24px;
+}
 
 header{
   display:flex;
@@ -36,10 +43,12 @@ header{
   font-weight:700;
 }
 
-/* ====== BANDERAS ====== */
+/* ===== BANDERAS ===== */
+
 .lang{
   display:flex;
   gap:10px;
+  align-items:center;
 }
 
 .flag-btn{
@@ -48,11 +57,11 @@ header{
   padding:4px;
   border-radius:8px;
   cursor:pointer;
-  transition:.3s;
+  transition:all .3s ease;
 }
 
 .flag-btn img{
-  width:32px;
+  width:34px;
   height:22px;
   object-fit:cover;
   border-radius:4px;
@@ -66,49 +75,55 @@ header{
 
 .flag-btn.active{
   border:2px solid var(--accent);
-  box-shadow:0 0 10px rgba(79,140,255,.6);
+  box-shadow:0 0 12px rgba(79,140,255,.6);
 }
 
-/* ====== HERO ====== */
+/* ===== CONTENIDO ===== */
+
 .hero{
-  margin-top:40px;
+  margin-top:60px;
 }
 
 h1{
   font-size:32px;
+  margin-bottom:10px;
 }
 
 p{
   color:var(--muted);
+  font-size:16px;
 }
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
 <header>
   <div class="logo">Winlab</div>
 
-  <div class="lang">
+  <div class="lang" aria-label="Language selector">
+
     <button class="flag-btn active" data-lang="fr">
-      <img src="images/francais.webp" alt="Français">
+      <img src="images/Francais.webp" alt="Français">
     </button>
 
     <button class="flag-btn" data-lang="es">
-      <img src="images/bandera-de-la-colombia.webp" alt="Español">
+      <img src="images/espagnol.webp" alt="Español">
     </button>
 
     <button class="flag-btn" data-lang="en">
-      <img src="images/51BT-KIkIPL.webp" alt="English">
+      <img src="images/anglais.webp" alt="English">
     </button>
+
   </div>
 </header>
 
 <section class="hero">
   <h1 id="title">Réparation de téléphones & consoles</h1>
   <p id="desc">
-    Winlab vend, achète et répare des cellulaires et consoles.
+    Winlab vend, achète et répare des cellulaires et consoles à Waterloo.
   </p>
 </section>
 
@@ -118,20 +133,21 @@ p{
 const translations = {
   fr:{
     title:"Réparation de téléphones & consoles",
-    desc:"Winlab vend, achète et répare des cellulaires et consoles."
+    desc:"Winlab vend, achète et répare des cellulaires et consoles à Waterloo."
   },
   es:{
     title:"Reparación de celulares y consolas",
-    desc:"Winlab vende, compra y repara celulares y consolas."
+    desc:"Winlab vende, compra y repara celulares y consolas en Waterloo."
   },
   en:{
     title:"Phone & Console Repair",
-    desc:"Winlab buys, sells and repairs phones and consoles."
+    desc:"Winlab buys, sells and repairs phones and consoles in Waterloo."
   }
 };
 
 function setLang(lang){
   document.documentElement.lang = lang;
+
   document.getElementById("title").textContent = translations[lang].title;
   document.getElementById("desc").textContent = translations[lang].desc;
 
