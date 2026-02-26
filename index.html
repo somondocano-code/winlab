@@ -1,5 +1,4 @@
-
- <!doctype html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
@@ -25,7 +24,7 @@
 *{box-sizing:border-box}
 body{
 margin:0;
-font-family:system-ui;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
 color:var(--text);
 background:radial-gradient(1200px 600px at 20% 10%, rgba(79,140,255,.25), transparent 55%),
 radial-gradient(900px 500px at 90% 20%, rgba(35,196,131,.18), transparent 60%),
@@ -38,31 +37,37 @@ border:1px solid var(--border);
 border-radius:var(--radius);
 box-shadow:var(--shadow);
 }
-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
 .logo{
-width:44px;height:44px;border-radius:12px;
+width:44px;
+height:44px;
+border-radius:12px;
 background:linear-gradient(135deg,var(--accent),var(--accent2));
 }
-.lang button{
-border:1px solid var(--border);
-background:rgba(255,255,255,.06);
-color:var(--text);
-padding:8px 10px;
-border-radius:12px;
-cursor:pointer;
-margin-left:5px;
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
 }
-.lang button.active{
-background:rgba(79,140,255,.22);
-}
+.brand h1{margin:0}
+.brand p{margin:0;color:var(--muted);font-size:13px}
+
 .hero{
 display:grid;
 grid-template-columns:1.25fr .75fr;
 gap:18px;
 }
-@media(max-width:900px){.hero{grid-template-columns:1fr}}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+}
 .heroMain{padding:22px}
 .heroMain h2{font-size:32px;margin:12px 0}
+.heroMain p{color:var(--muted)}
 .btn{
 display:inline-block;
 padding:12px 14px;
@@ -75,30 +80,25 @@ margin-right:8px;
 }
 .btn.primary{background:rgba(79,140,255,.28)}
 .btn.whatsapp{background:rgba(35,196,131,.18)}
-.pill{padding:14px;margin-bottom:10px;border-radius:14px;border:1px solid var(--border)}
+.mini{padding:16px}
+.pill{
+padding:14px;
+margin-bottom:10px;
+border-radius:14px;
+border:1px solid var(--border);
+background:rgba(255,255,255,.04);
+}
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:14px;
 margin-top:16px;
 }
-@media(max-width:900px){.grid{grid-template-columns:1fr}}
+@media(max-width:900px){
+.grid{grid-template-columns:1fr}
+}
 .svc{padding:16px}
-.map{width:100%;height:340px;border:0}
-.gallery{margin-top:30px}
-.gallery h2{margin-bottom:20px}
-.gallery-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
-}
-.gallery-grid img{
-width:100%;
-border-radius:14px;
-border:1px solid var(--border);
-transition:.3s;
-}
-.gallery-grid img:hover{transform:scale(1.05)}
+.map{width:100%;height:340px;border:0;margin-top:20px}
 footer{
 margin-top:20px;
 color:var(--muted);
@@ -116,6 +116,8 @@ border-radius:999px;
 font-weight:800;
 border:1px solid rgba(35,196,131,.7);
 background:rgba(35,196,131,.22);
+text-decoration:none;
+color:var(--text);
 }
 </style>
 </head>
@@ -124,73 +126,66 @@ background:rgba(35,196,131,.22);
 <div class="wrap">
 
 <header>
-<div style="display:flex;align-items:center;gap:12px">
+<div class="brand">
 <div class="logo"></div>
 <div>
 <h1>Winlab</h1>
 <p>Réparation • Achat • Vente — Téléphones & Consoles</p>
 </div>
 </div>
-<div class="lang">
-<button class="active">FR</button>
-<button>ES</button>
-<button>EN</button>
-</div>
 </header>
 
 <section class="hero">
 <div class="card heroMain">
 <h2>Réparation de téléphones & consoles, rapidement.</h2>
-<p>Winlab vend, achète et répare des cellulaires et consoles de jeux à Waterloo QC.</p>
+<p>
+Winlab vend, achète et répare des cellulaires et consoles de jeux à Waterloo QC.
+Passez nous voir ou écrivez-nous sur WhatsApp.
+</p>
 <br>
 <a class="btn primary" href="tel:+14502097144">📞 Appeler</a>
 <a class="btn whatsapp" target="_blank" href="https://wa.me/14502097144">💬 WhatsApp</a>
 <a class="btn" href="mailto:info@winlab.ca">✉️ Email</a>
 </div>
 
-<div class="card" style="padding:16px">
-<div class="pill"><strong>Horaires</strong><br>8:00 – 20:00</div>
+<div class="card mini">
+<div class="pill"><strong>Horaires</strong><br>Ouvert tous les jours • 8:00 – 20:00</div>
 <div class="pill"><strong>Adresse</strong><br>275 Rue Western, Waterloo QC</div>
-<div class="pill"><strong>Téléphone</strong><br>450-209-7144</div>
+<div class="pill"><strong>Téléphone</strong><br>+1 (450) 209-7144</div>
 </div>
 </section>
 
 <section class="grid">
-<div class="card svc"><h3>📱 Réparation de cellulaire</h3><p>Écran, batterie, charge, diagnostic.</p></div>
-<div class="card svc"><h3>🎮 Réparation de consoles</h3><p>PlayStation, Xbox, Nintendo.</p></div>
-<div class="card svc"><h3>💰 Achat & vente</h3><p>Nous achetons et vendons des téléphones.</p></div>
-</section>
-
-<section class="card" style="margin-top:20px">
-<iframe class="map" src="https://www.google.com/maps?q=275%20Rue%20Western%2C%20Waterloo%20QC&output=embed"></iframe>
-</section>
-
-<section class="gallery">
-<h2>Notre atelier</h2>
-<div class="gallery-grid">
-<img src="images/atelier.jpg">
-<img src="images/reparation1.jpg">
-<img src="images/console.jpg">
-<img src="images/facade.jpg">
-<img src="images/avant-apres.jpg">
+<div class="card svc">
+<h3>📱 Réparation de cellulaire</h3>
+<p>Écran, batterie, charge, diagnostic, problèmes logiciels.</p>
+</div>
+<div class="card svc">
+<h3>🎮 Réparation de consoles</h3>
+<p>PlayStation, Xbox, Nintendo — nettoyage, surchauffe, ports.</p>
+</div>
+<div class="card svc">
+<h3>💰 Achat & vente</h3>
+<p>Nous achetons et vendons des téléphones — demandez disponibilité.</p>
 </div>
 </section>
- <section class="gallery">
-  <h2>Notre atelier</h2>
-  <div class="gallery-grid">
-    <img src="638793193_122118240483104143_445719342282076155_n.jpg" alt="Atelier Winlab">
-    <img src="627038469_122114427363104143_4702579832770396404_n.jpg" alt="Réparation téléphone">
-  </div>
-</section>
+
+<iframe class="map"
+src="https://www.google.com/maps?q=275%20Rue%20Western%2C%20Waterloo%20QC&output=embed">
+</iframe>
 
 <footer>
 <div>© 2026 Winlab</div>
-<div>Ouvert tous les jours 8:00–20:00</div>
+<div>Ouvert tous les jours 8:00–20:00 • 275 Rue Western • 450-209-7144</div>
 </footer>
 
 </div>
 
-<a class="fab" target="_blank" href="https://wa.me/14502097144">💬 WhatsApp</a>
+<a class="fab" target="_blank"
+href="https://wa.me/14502097144?text=Bonjour%20Winlab%20!%20J%27aimerais%20une%20info%20sur%20une%20r%C3%A9paration.">
+💬 WhatsApp
+</a>
 
 </body>
 </html>
+ 
