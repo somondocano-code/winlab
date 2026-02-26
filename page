@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Winlab | Réparation de Téléphones et Consoles</title>
+  <meta name="description" content="Winlab - Achat, vente et réparation de téléphones mobiles et consoles de jeux au Canada." />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #d1d5db;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+
+    .contact a {
+      color: #22c55e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Winlab</h1>
+  <p>Achat, Vente et Réparation de Téléphones et Consoles</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📱 Nos Services</h2>
+    <ul>
+      <li>Remplacement d’écran et de batterie</li>
+      <li>Déverrouillage et maintenance de téléphones</li>
+      <li>Achat et vente de téléphones usagés</li>
+      <li>Réparation de PlayStation, Xbox et Nintendo</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚡ Pourquoi nous choisir ?</h2>
+    <ul>
+      <li>Service rapide et professionnel</li>
+      <li>Prix compétitifs</li>
+      <li>Diagnostic honnête</li>
+      <li>Service personnalisé</li>
+    </ul>
+  </div>
+
+  <div class="contact">
+    <h2>📞 Contactez-nous</h2>
+    <p>Téléphone : <a href="tel:+14502097144">450-209-7144</a></p>
+    <p>Email : <a href="mailto:info@winlab.ca">info@winlab.ca</a></p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Winlab - Tous droits réservés
+</footer>
+
+</body>
+</html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Winlab | Celulares y Consolas</title>
+  <meta name="description" content="Winlab - Compra, venta y reparación de celulares y consolas." />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background:#f4f6f9; color:#222; }
+    header { background:#111827; color:#fff; padding:34px 18px; text-align:center; }
+    header h1 { margin:0; font-size:34px; }
+    header p { margin:10px 0 0; color:#d1d5db; font-size:16px; }
+
+    .topbar { max-width: 980px; margin: 16px auto 0; padding: 0 16px; display:flex; justify-content:flex-end; }
+    select { padding:10px 12px; border-radius:10px; border:1px solid #ddd; background:#fff; }
+
+    .container { max-width: 980px; margin: 18px auto 40px; padding: 0 16px; }
+    .card { background:#fff; padding:22px; border-radius:14px; box-shadow:0 8px 25px rgba(0,0,0,.06); margin: 16px 0; }
+    h2 { margin: 0 0 10px; }
+    ul { margin: 0; padding-left: 18px; }
+
+    .contact { background:#111827; color:#fff; text-align:center; padding:22px; border-radius:14px; }
+    .contact a { color:#22c55e; text-decoration:none; font-weight:bold; }
+
+    footer { text-align:center; padding: 18px; font-size: 14px; color:#666; }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <select id="langSelect" aria-label="Language">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+  </div>
+
+  <header>
+    <h1>Winlab</h1>
+    <p id="heroSubtitle">Compra, Venta y Reparación de Celulares y Consolas</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2 id="servicesTitle">📱 Servicios</h2>
+      <ul>
+        <li id="s1">Reparación de pantallas y baterías</li>
+        <li id="s2">Desbloqueo y mantenimiento de celulares</li>
+        <li id="s3">Compra y venta de celulares usados</li>
+        <li id="s4">Reparación de PlayStation, Xbox y Nintendo</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 id="whyTitle">⚡ ¿Por qué elegirnos?</h2>
+      <ul>
+        <li id="w1">Servicio rápido y profesional</li>
+        <li id="w2">Precios competitivos</li>
+        <li id="w3">Diagnóstico honesto</li>
+        <li id="w4">Atención personalizada</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h2 id="contactTitle">📞 Contáctanos</h2>
+      <p><span id="phoneLabel">Teléfono</span>: <a href="tel:+14502097144">450-209-7144</a></p>
+      <p><span id="emailLabel">Email</span>: <a href="mailto:info@winlab.ca">info@winlab.ca</a></p>
+    </div>
+  </div>
+
+  <footer id="footerText">© 2026 Winlab - Todos los derechos reservados</footer>
+
+  <script>
+    const i18n = {
+      es: {
+        heroSubtitle: "Compra, Venta y Reparación de Celulares y Consolas",
+        servicesTitle: "📱 Servicios",
+        s1: "Reparación de pantallas y baterías",
+        s2: "Desbloqueo y mantenimiento de celulares",
+        s3: "Compra y venta de celulares usados",
+        s4: "Reparación de PlayStation, Xbox y Nintendo",
+        whyTitle: "⚡ ¿Por qué elegirnos?",
+        w1: "Servicio rápido y profesional",
+        w2: "Precios competitivos",
+        w3: "Diagnóstico honesto",
+        w4: "Atención personalizada",
+        contactTitle: "📞 Contáctanos",
+        phoneLabel: "Teléfono",
+        emailLabel: "Email",
+        footerText: "© 2026 Winlab - Todos los derechos reservados"
+      },
+      en: {
+        heroSubtitle: "Buy, Sell and Repair Phones and Game Consoles",
+        servicesTitle: "📱 Services",
+        s1: "Screen and battery replacement",
+        s2: "Phone unlocking and maintenance",
+        s3: "Buy and sell used phones",
+        s4: "PlayStation, Xbox and Nintendo repair",
+        whyTitle: "⚡ Why choose us?",
+        w1: "Fast and professional service",
+        w2: "Competitive prices",
+        w3: "Honest diagnostics",
+        w4: "Personalized support",
+        contactTitle: "📞 Contact",
+        phoneLabel: "Phone",
+        emailLabel: "Email",
+        footerText: "© 2026 Winlab - All rights reserved"
+      },
+      fr: {
+        heroSubtitle: "Achat, vente et réparation de téléphones et consoles",
+        servicesTitle: "📱 Services",
+        s1: "Remplacement d’écran et de batterie",
+        s2: "Déverrouillage et entretien de téléphones",
+        s3: "Achat et vente de téléphones d’occasion",
+        s4: "Réparation PlayStation, Xbox et Nintendo",
+        whyTitle: "⚡ Pourquoi nous choisir ?",
+        w1: "Service rapide et professionnel",
+        w2: "Prix compétitifs",
+        w3: "Diagnostic honnête",
+        w4: "Service personnalisé",
+        contactTitle: "📞 Contact",
+        phoneLabel: "Téléphone",
+        emailLabel: "Email",
+        footerText: "© 2026 Winlab - Tous droits réservés"
+      }
+    };
+
+    function setLang(lang) {
+      const dict = i18n[lang] || i18n.es;
+
+      // Cambia el atributo lang del documento
+      document.documentElement.lang = lang;
+
+      // Reemplaza textos por id
+      for (const key in dict) {
+        const el = document.getElementById(key);
+        if (el) el.textContent = dict[key];
+      }
+
+      // Guarda preferencia
+      localStorage.setItem("winlab_lang", lang);
+    }
+
+    // Inicializa (preferencia guardada o idioma del navegador)
+    const saved = localStorage.getItem("winlab_lang");
+    const browser = (navigator.language || "es").slice(0,2);
+    const initial = saved || (i18n[browser] ? browser : "es");
+
+    const select = document.getElementById("langSelect");
+    select.value = initial;
+    setLang(initial);
+
+    select.addEventListener("change", (e) => setLang(e.target.value));
+  </script>
+</body>
+</html>
