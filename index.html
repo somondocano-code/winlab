@@ -5,103 +5,82 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Winlab — Réparation cellulaire & consoles | Waterloo QC</title>
 
-<meta name="description" content="Winlab: vente, achat et réparation de téléphones et consoles de jeux à Waterloo (QC). Ouvert tous les jours 8:00–20:00. 275 Rue Western. Tél: 450-209-7144." />
-<meta name="robots" content="index,follow" />
+<meta name="description" content="Winlab: vente, achat et réparation de téléphones et consoles à Waterloo QC. Ouvert tous les jours 8:00–20:00."/>
+<meta name="robots" content="index,follow"/>
 
 <style>
 :root{
---bg:#0b0f1a;
---card:#10182b;
---text:#e9eefc;
---muted:#b9c2db;
---accent:#4f8cff;
---accent2:#23c483;
---border:rgba(255,255,255,.12);
---shadow:0 18px 60px rgba(0,0,0,.35);
---radius:18px;
---max:1050px;
+  --bg:#0b0f1a;
+  --card:#10182b;
+  --text:#e9eefc;
+  --muted:#b9c2db;
+  --accent:#4f8cff;
+  --accent2:#23c483;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 18px 60px rgba(0,0,0,.35);
+  --radius:18px;
+  --max:1100px;
 }
 *{box-sizing:border-box}
 body{
-margin:0;
-font-family:system-ui;
-color:var(--text);
-background:radial-gradient(1200px 600px at 20% 10%, rgba(79,140,255,.25), transparent 55%),
-radial-gradient(900px 500px at 90% 20%, rgba(35,196,131,.18), transparent 60%),
-var(--bg);
+  margin:0;
+  font-family:system-ui;
+  color:var(--text);
+  background:radial-gradient(1000px 600px at 20% 10%, rgba(79,140,255,.25), transparent 55%),var(--bg);
 }
 .wrap{max-width:var(--max);margin:auto;padding:24px}
 .card{
-background:rgba(16,24,43,.86);
-border:1px solid var(--border);
-border-radius:var(--radius);
-box-shadow:var(--shadow);
+  background:rgba(16,24,43,.9);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
 .logo{
-width:44px;height:44px;border-radius:12px;
-background:linear-gradient(135deg,var(--accent),var(--accent2));
+  width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
 }
+.brand{display:flex;gap:12px;align-items:center}
 .lang button{
-border:1px solid var(--border);
-background:rgba(255,255,255,.06);
-color:var(--text);
-padding:8px 10px;
-border-radius:12px;
-cursor:pointer;
-margin-left:5px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.06);
+  color:white;
+  padding:6px 10px;
+  border-radius:10px;
+  cursor:pointer;
 }
-.lang button.active{
-background:rgba(79,140,255,.22);
-}
-.hero{
-display:grid;
-grid-template-columns:1.25fr .75fr;
-gap:18px;
-}
+.lang button.active{background:rgba(79,140,255,.3)}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:16px}
 @media(max-width:900px){.hero{grid-template-columns:1fr}}
 .heroMain{padding:22px}
-.heroMain h2{font-size:32px;margin:12px 0}
+.heroMain h2{font-size:32px;margin:10px 0}
+.heroMain p{color:var(--muted)}
+.hero-bullets{color:var(--muted);margin-top:10px}
 .btn{
-display:inline-block;
-padding:12px 14px;
-border-radius:14px;
-border:1px solid var(--border);
-background:rgba(255,255,255,.06);
-text-decoration:none;
-font-weight:700;
-margin-right:8px;
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid var(--border);
+  margin-top:10px;
 }
-.btn.primary{background:rgba(79,140,255,.28)}
-.btn.whatsapp{background:rgba(35,196,131,.18)}
-.pill{padding:14px;margin-bottom:10px;border-radius:14px;border:1px solid var(--border)}
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
-margin-top:16px;
-}
+.primary{background:rgba(79,140,255,.3)}
+.whatsapp{background:rgba(35,196,131,.25)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
 @media(max-width:900px){.grid{grid-template-columns:1fr}}
 .svc{padding:16px}
-.map{width:100%;height:340px;border:0}
-footer{
-margin-top:20px;
-color:var(--muted);
-font-size:12px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-.fab{
-position:fixed;
-right:18px;
-bottom:18px;
-padding:13px 15px;
-border-radius:999px;
-font-weight:800;
-border:1px solid rgba(35,196,131,.7);
-background:rgba(35,196,131,.22);
-}
+.section{padding:18px;margin-top:18px}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+.why-item{padding:14px;border:1px solid var(--border);border-radius:14px}
+.reviews-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:900px){.reviews-row{grid-template-columns:1fr}}
+.rating-box{padding:14px;border:1px solid var(--border);border-radius:14px}
+.stars{font-size:18px;letter-spacing:3px}
+.reveal{opacity:0;transform:translateY(20px);transition:.6s}
+.reveal.show{opacity:1;transform:translateY(0)}
+footer{margin-top:30px;color:var(--muted);font-size:12px}
 </style>
 </head>
 
@@ -109,11 +88,11 @@ background:rgba(35,196,131,.22);
 <div class="wrap">
 
 <header>
-<div style="display:flex;align-items:center;gap:12px">
+<div class="brand">
 <div class="logo"></div>
 <div>
 <h1>Winlab</h1>
-<p id="tagline">Réparation • Achat • Vente — Téléphones & Consoles</p>
+<p id="tagline">Réparation • Achat • Vente</p>
 </div>
 </div>
 
@@ -124,119 +103,99 @@ background:rgba(35,196,131,.22);
 </div>
 </header>
 
-<section class="hero">
-<div class="card heroMain">
-<h2 id="headline">Réparation de téléphones & consoles, rapidement.</h2>
-<p id="sub">Winlab vend, achète et répare des cellulaires et consoles de jeux à Waterloo QC.</p>
-<br>
-<a class="btn primary" id="callBtn" href="tel:+14502097144">📞 Appeler</a>
-<a class="btn whatsapp" id="waBtn" target="_blank" href="https://wa.me/14502097144">💬 WhatsApp</a>
-<a class="btn" id="emailBtn" href="mailto:info@winlab.ca">✉️ Email</a>
+<section class="hero card reveal">
+<div class="heroMain">
+<h2 id="headline">Réparation rapide et professionnelle</h2>
+<p id="sub">Téléphones et consoles à Waterloo QC.</p>
+
+<ul class="hero-bullets">
+<li id="hb1">Diagnostic clair avant réparation</li>
+<li id="hb2">Service rapide et professionnel</li>
+<li id="hb3">Ouvert 7j/7 — 8h à 20h</li>
+</ul>
+
+<a class="btn primary" href="tel:+14502097144">📞 Appeler</a>
+<a class="btn whatsapp" target="_blank"
+href="https://wa.me/14502097144">💬 WhatsApp</a>
 </div>
 
 <div class="card" style="padding:16px">
-<div class="pill"><strong id="hoursTitle">Horaires</strong><br><span id="hoursText">8:00 – 20:00</span></div>
-<div class="pill"><strong id="addrTitle">Adresse</strong><br>275 Rue Western, Waterloo QC</div>
-<div class="pill"><strong id="phoneTitle">Téléphone</strong><br>450-209-7144</div>
+<strong>📍 Adresse</strong>
+<p>275 Rue Western, Waterloo QC</p>
+<strong>🕒 Horaires</strong>
+<p>Tous les jours 8:00 – 20:00</p>
 </div>
 </section>
 
-<section class="grid">
-<div class="card svc"><h3 id="s1t">📱 Réparation de cellulaire</h3><p id="s1d">Écran, batterie, charge, diagnostic.</p></div>
-<div class="card svc"><h3 id="s2t">🎮 Réparation de consoles</h3><p id="s2d">PlayStation, Xbox, Nintendo.</p></div>
-<div class="card svc"><h3 id="s3t">💰 Achat & vente</h3><p id="s3d">Nous achetons et vendons des téléphones.</p></div>
+<section class="grid reveal">
+<div class="card svc">
+<h3>📱 Réparation cellulaire</h3>
+<p>Écran, batterie, charge, logiciel.</p>
+</div>
+<div class="card svc">
+<h3>🎮 Réparation consoles</h3>
+<p>PlayStation, Xbox, Nintendo.</p>
+</div>
+<div class="card svc">
+<h3>💰 Achat & vente</h3>
+<p>Téléphones usagés disponibles.</p>
+</div>
 </section>
 
-<section class="card" style="margin-top:20px">
-<iframe class="map" src="https://www.google.com/maps?q=275%20Rue%20Western%2C%20Waterloo%20QC&output=embed"></iframe>
+<section class="card section reveal">
+<h2>Pourquoi choisir Winlab</h2>
+<div class="why-grid">
+<div class="why-item">
+<h3>✅ Diagnostic honnête</h3>
+<p>Prix expliqué avant réparation.</p>
+</div>
+<div class="why-item">
+<h3>⚡ Service rapide</h3>
+<p>Plusieurs réparations le jour même.</p>
+</div>
+<div class="why-item">
+<h3>🛠️ Téléphones & consoles</h3>
+<p>iPhone, Samsung, PlayStation.</p>
+</div>
+</div>
+</section>
+
+<section class="card section reveal">
+<h2>Avis Google</h2>
+<div class="reviews-row">
+<div class="rating-box">
+<div class="stars">★★★★★</div>
+<p><strong>5.0</strong> • 2 avis</p>
+<a class="btn primary" target="_blank"
+href="https://g.page/r/CYQW_tWEHGkKEBM/review">
+Laisser un avis
+</a>
+</div>
+<div class="rating-box">
+Un avis Google nous aide énormément à grandir 🙏
+</div>
+</div>
 </section>
 
 <footer>
-<div>© 2026 Winlab</div>
-<div id="foot">Ouvert tous les jours 8:00–20:00</div>
+© <span id="year"></span> Winlab • 450-209-7144
 </footer>
 
 </div>
 
-<a class="fab" target="_blank" href="https://wa.me/14502097144">💬 WhatsApp</a>
-
 <script>
-const translations = {
-fr:{
-tagline:"Réparation • Achat • Vente — Téléphones & Consoles",
-headline:"Réparation de téléphones & consoles, rapidement.",
-sub:"Winlab vend, achète et répare des cellulaires et consoles de jeux à Waterloo QC.",
-call:"📞 Appeler",
-email:"✉️ Email",
-hoursTitle:"Horaires",
-hoursText:"8:00 – 20:00",
-s1t:"📱 Réparation de cellulaire",
-s1d:"Écran, batterie, charge, diagnostic.",
-s2t:"🎮 Réparation de consoles",
-s2d:"PlayStation, Xbox, Nintendo.",
-s3t:"💰 Achat & vente",
-s3d:"Nous achetons et vendons des téléphones.",
-foot:"Ouvert tous les jours 8:00–20:00"
-},
-es:{
-tagline:"Reparo • Compro • Vendo — Celulares y consolas",
-headline:"Reparación de celulares y consolas, rápido.",
-sub:"Winlab compra, vende y repara celulares y consolas en Waterloo QC.",
-call:"📞 Llamar",
-email:"✉️ Correo",
-hoursTitle:"Horario",
-hoursText:"8:00 – 20:00",
-s1t:"📱 Reparación de celulares",
-s1d:"Pantalla, batería, carga, diagnóstico.",
-s2t:"🎮 Reparación de consolas",
-s2d:"PlayStation, Xbox, Nintendo.",
-s3t:"💰 Compra y venta",
-s3d:"Compramos y vendemos teléfonos.",
-foot:"Abierto todos los días 8:00–20:00"
-},
-en:{
-tagline:"Repair • Buy • Sell — Phones & Consoles",
-headline:"Phone & console repair, fast.",
-sub:"Winlab buys, sells and repairs phones and consoles in Waterloo QC.",
-call:"📞 Call",
-email:"✉️ Email",
-hoursTitle:"Hours",
-hoursText:"8:00 AM – 8:00 PM",
-s1t:"📱 Phone repair",
-s1d:"Screen, battery, charging, diagnostics.",
-s2t:"🎮 Console repair",
-s2d:"PlayStation, Xbox, Nintendo.",
-s3t:"💰 Buy & sell",
-s3d:"We buy and sell phones.",
-foot:"Open every day 8:00 AM–8:00 PM"
-}
-};
+document.getElementById("year").textContent=new Date().getFullYear();
 
-function setLang(lang){
-const t = translations[lang];
-document.documentElement.lang = lang;
-document.getElementById("tagline").textContent = t.tagline;
-document.getElementById("headline").textContent = t.headline;
-document.getElementById("sub").textContent = t.sub;
-document.getElementById("callBtn").textContent = t.call;
-document.getElementById("emailBtn").textContent = t.email;
-document.getElementById("hoursTitle").textContent = t.hoursTitle;
-document.getElementById("hoursText").textContent = t.hoursText;
-document.getElementById("s1t").textContent = t.s1t;
-document.getElementById("s1d").textContent = t.s1d;
-document.getElementById("s2t").textContent = t.s2t;
-document.getElementById("s2d").textContent = t.s2d;
-document.getElementById("s3t").textContent = t.s3t;
-document.getElementById("s3d").textContent = t.s3d;
-document.getElementById("foot").textContent = t.foot;
-
-document.querySelectorAll(".lang button").forEach(b=>{
-b.classList.toggle("active", b.dataset.lang === lang);
-});
-}
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")})
+},{threshold:.2});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
 document.querySelectorAll(".lang button").forEach(btn=>{
-btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
+btn.addEventListener("click",()=>{
+document.querySelectorAll(".lang button").forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+});
 });
 </script>
 
