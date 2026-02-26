@@ -1,416 +1,151 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Winlab — Réparation cellulaire & consoles | Waterloo QC</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Winlab — Réparation cellulaire & consoles | Waterloo QC</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Winlab: vente, achat et réparation de téléphones et consoles de jeux à Waterloo (QC). Ouvert tous les jours 8:00–20:00. 275 Rue Western. Tél: 450-209-7144." />
-  <meta name="keywords" content="réparation téléphone Waterloo, réparation cellulaire Waterloo, réparation console Waterloo, achat téléphone Waterloo, vente téléphone Waterloo, Winlab" />
-  <meta name="robots" content="index,follow" />
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#10182b;
+  --text:#e9eefc;
+  --muted:#b9c2db;
+  --accent:#4f8cff;
+  --border:rgba(255,255,255,.12);
+  --radius:18px;
+  --max:1050px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  color:var(--text);
+  background:var(--bg);
+}
+.wrap{max-width:var(--max);margin:auto;padding:24px;}
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Winlab — Réparation cellulaire & consoles" />
-  <meta property="og:description" content="Ouvert tous les jours 8:00–20:00 • 275 Rue Western, Waterloo QC • 450-209-7144" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://winlab.ca" />
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-  <style>
-    :root{
-      --bg:#0b0f1a;
-      --card:#10182b;
-      --text:#e9eefc;
-      --muted:#b9c2db;
-      --accent:#4f8cff;
-      --accent2:#23c483;
-      --border:rgba(255,255,255,.12);
-      --shadow: 0 18px 60px rgba(0,0,0,.35);
-      --radius:18px;
-      --max:1050px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 20% 10%, rgba(79,140,255,.25), transparent 55%),
-                  radial-gradient(900px 500px at 90% 20%, rgba(35,196,131,.18), transparent 60%),
-                  var(--bg);
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px;}
-    header{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-      padding:10px 0 22px;
-    }
-    .brand{ display:flex; align-items:center; gap:12px; }
-    .logo{
-      width:44px; height:44px; border-radius:12px;
-      background: linear-gradient(135deg, var(--accent), rgba(35,196,131,.9));
-      box-shadow: var(--shadow);
-    }
-    .brand h1{margin:0; font-size:18px; letter-spacing:.3px;}
-    .brand p{margin:0; color:var(--muted); font-size:12px;}
+.logo{
+  font-size:22px;
+  font-weight:700;
+}
 
-    .lang{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
-    .lang button{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      padding:8px 10px;
-      border-radius:12px;
-      cursor:pointer;
-      font-weight:600;
-    }
-    .lang button.active{
-      background:rgba(79,140,255,.22);
-      border-color: rgba(79,140,255,.6);
-    }
+/* ====== BANDERAS ====== */
+.lang{
+  display:flex;
+  gap:10px;
+}
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width:900px){ .hero{grid-template-columns:1fr;} }
+.flag-btn{
+  background:transparent;
+  border:1px solid var(--border);
+  padding:4px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.3s;
+}
 
-    .card{
-      background:rgba(16,24,43,.86);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .heroMain{ padding:22px; }
-    .kicker{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:6px 10px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      color:var(--muted);
-      font-size:12px;
-      background: rgba(255,255,255,.04);
-    }
-    .heroMain h2{ margin:12px 0 10px; font-size:34px; line-height:1.12;}
-    .heroMain p{ margin:0; color:var(--muted); font-size:15px; line-height:1.55; max-width:65ch;}
-    .ctaRow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.06);
-      text-decoration:none;
-      font-weight:700;
-    }
-    .btn.primary{
-      background: rgba(79,140,255,.28);
-      border-color: rgba(79,140,255,.65);
-    }
-    .btn.whatsapp{
-      background: rgba(35,196,131,.18);
-      border-color: rgba(35,196,131,.55);
-    }
+.flag-btn img{
+  width:32px;
+  height:22px;
+  object-fit:cover;
+  border-radius:4px;
+  display:block;
+}
 
-    .mini{
-      display:grid; gap:10px; padding:16px;
-      grid-template-columns:1fr;
-    }
-    .pill{
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-    }
-    .pill strong{display:block; font-size:13px;}
-    .pill span{display:block; color:var(--muted); font-size:13px; margin-top:4px;}
+.flag-btn:hover{
+  transform:scale(1.1);
+  border-color:var(--accent);
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      margin-top:16px;
-    }
-    @media (max-width:900px){ .grid{grid-template-columns:1fr;} }
-    .svc{ padding:16px;}
-    .svc h3{ margin:0 0 6px; font-size:16px;}
-    .svc p{ margin:0; color:var(--muted); font-size:13px; line-height:1.55;}
+.flag-btn.active{
+  border:2px solid var(--accent);
+  box-shadow:0 0 10px rgba(79,140,255,.6);
+}
 
-    .mapWrap{ margin-top:16px; }
-    .map{ width:100%; height:340px; border:0; display:block; }
+/* ====== HERO ====== */
+.hero{
+  margin-top:40px;
+}
 
-    .reviews{
-      margin-top:16px;
-      padding:18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-    .reviews h3{ margin:0; font-size:16px; }
-    .reviews p{ margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.5; }
-    .reviews .left{ min-width:260px; }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:12px;
-      margin-top:10px;
-    }
+h1{
+  font-size:32px;
+}
 
-    footer{
-      color:var(--muted);
-      font-size:12px;
-      margin:18px 0 6px;
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-    }
-
-    /* Floating WhatsApp button */
-    .fab{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:999;
-      text-decoration:none;
-      padding:13px 15px;
-      border-radius:999px;
-      font-weight:800;
-      border:1px solid rgba(35,196,131,.7);
-      background: rgba(35,196,131,.22);
-      box-shadow: var(--shadow);
-    }
-  </style>
+p{
+  color:var(--muted);
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Winlab</h1>
-          <p id="tagline">Réparation • Achat • Vente — Téléphones & Consoles</p>
-        </div>
-      </div>
+<div class="wrap">
 
-      <div class="lang" aria-label="Language selector">
-        <button class="active" data-lang="fr">FR</button>
-        <button data-lang="es">ES</button>
-        <button data-lang="en">EN</button>
-      </div>
-    </header>
+<header>
+  <div class="logo">Winlab</div>
 
-    <section class="hero">
-      <div class="card heroMain">
-        <div class="kicker" id="kicker">📍 Waterloo, QC • Ouvert tous les jours</div>
-        <h2 id="headline">Réparation de téléphones & consoles, rapidement.</h2>
-        <p id="sub">
-          Winlab vend, achète et répare des cellulaires, et répare aussi les consoles de jeux.
-          Passez nous voir ou écrivez-nous sur WhatsApp.
-        </p>
+  <div class="lang">
+    <button class="flag-btn active" data-lang="fr">
+      <img src="images/francais.webp" alt="Français">
+    </button>
 
-        <div class="ctaRow">
-          <a class="btn primary" id="callBtn" href="tel:+14502097144">📞 Appeler</a>
-          <a class="btn whatsapp" id="waBtn" target="_blank" rel="noopener"
-             href="https://wa.me/14502097144?text=Bonjour%20Winlab%20!%20J%27aimerais%20une%20info%20sur%20une%20r%C3%A9paration.">
-            💬 WhatsApp
-          </a>
-          <a class="btn" id="emailBtn" href="mailto:info@winlab.ca">✉️ Email</a>
-        </div>
-      </div>
+    <button class="flag-btn" data-lang="es">
+      <img src="images/bandera-de-la-colombia.webp" alt="Español">
+    </button>
 
-      <div class="card mini">
-        <div class="pill">
-          <strong id="hoursTitle">Horaires</strong>
-          <span id="hoursText">Tous les jours • 8:00 – 20:00</span>
-        </div>
-        <div class="pill">
-          <strong id="addrTitle">Adresse</strong>
-          <span id="addrText">275 Rue Western, Waterloo QC</span>
-        </div>
-        <div class="pill">
-          <strong id="phoneTitle">Téléphone</strong>
-          <span id="phoneText">+1 (450) 209-7144</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="grid" aria-label="Services">
-      <div class="card svc">
-        <h3 id="s1t">📱 Réparation de cellulaire</h3>
-        <p id="s1d">Écran, batterie, charge, diagnostic, problèmes logiciels.</p>
-      </div>
-      <div class="card svc">
-        <h3 id="s2t">🎮 Réparation de consoles</h3>
-        <p id="s2d">PlayStation, Xbox, Nintendo — nettoyage, surchauffe, ports, etc.</p>
-      </div>
-      <div class="card svc">
-        <h3 id="s3t">💰 Achat & vente</h3>
-        <p id="s3d">Nous achetons et vendons des téléphones — demandez disponibilité.</p>
-      </div>
-    </section>
-
-    <!-- Avis Google -->
-    <section class="card reviews" aria-label="Avis Google">
-      <div class="left">
-        <h3 id="revTitle">Avis Google</h3>
-        <p id="revText">Un avis Google nous aide énormément à grandir. Merci 🙏</p>
-        <div class="badge" id="revBadge">★★★★★ • 5.0</div>
-      </div>
-      <div class="right">
-        <a class="btn primary" id="revBtn" target="_blank" rel="noopener"
-           href="https://g.page/r/CYQW_tWEHGkKEBM/review">⭐ Laisser un avis</a>
-      </div>
-    </section>
-
-    <section class="card mapWrap" aria-label="Map">
-      <iframe
-        class="map"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=275%20Rue%20Western%2C%20Waterloo%20QC&output=embed">
-      </iframe>
-    </section>
-
-    <footer>
-      <div>© <span id="year"></span> Winlab • winlab.ca</div>
-      <div id="foot">Ouvert tous les jours 8:00–20:00 • 275 Rue Western, Waterloo QC • 450-209-7144</div>
-    </footer>
+    <button class="flag-btn" data-lang="en">
+      <img src="images/51BT-KIkIPL.webp" alt="English">
+    </button>
   </div>
+</header>
 
-  <a class="fab" target="_blank" rel="noopener"
-     href="https://wa.me/14502097144?text=Bonjour%20Winlab%20!%20J%27aimerais%20une%20info%20sur%20une%20r%C3%A9paration.">
-    💬 WhatsApp
-  </a>
+<section class="hero">
+  <h1 id="title">Réparation de téléphones & consoles</h1>
+  <p id="desc">
+    Winlab vend, achète et répare des cellulaires et consoles.
+  </p>
+</section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+</div>
 
-    const reviewLink = "https://g.page/r/CYQW_tWEHGkKEBM/review";
+<script>
+const translations = {
+  fr:{
+    title:"Réparation de téléphones & consoles",
+    desc:"Winlab vend, achète et répare des cellulaires et consoles."
+  },
+  es:{
+    title:"Reparación de celulares y consolas",
+    desc:"Winlab vende, compra y repara celulares y consolas."
+  },
+  en:{
+    title:"Phone & Console Repair",
+    desc:"Winlab buys, sells and repairs phones and consoles."
+  }
+};
 
-    const t = {
-      fr: {
-        tagline: "Réparation • Achat • Vente — Téléphones & Consoles",
-        kicker: "📍 Waterloo, QC • Ouvert tous les jours",
-        headline: "Réparation de téléphones & consoles, rapidement.",
-        sub: "Winlab vend, achète et répare des cellulaires, et répare aussi les consoles de jeux. Passez nous voir ou écrivez-nous sur WhatsApp.",
-        call: "📞 Appeler",
-        email: "✉️ Email",
-        hoursTitle:"Horaires", hoursText:"Tous les jours • 8:00 – 20:00",
-        addrTitle:"Adresse", addrText:"275 Rue Western, Waterloo QC",
-        phoneTitle:"Téléphone", phoneText:"+1 (450) 209-7144",
-        s1t:"📱 Réparation de cellulaire", s1d:"Écran, batterie, charge, diagnostic, problèmes logiciels.",
-        s2t:"🎮 Réparation de consoles", s2d:"PlayStation, Xbox, Nintendo — nettoyage, surchauffe, ports, etc.",
-        s3t:"💰 Achat & vente", s3d:"Nous achetons et vendons des téléphones — demandez disponibilité.",
-        revTitle:"Avis Google",
-        revText:"Un avis Google nous aide énormément à grandir. Merci 🙏",
-        revBtn:"⭐ Laisser un avis",
-        foot:"Ouvert tous les jours 8:00–20:00 • 275 Rue Western, Waterloo QC • 450-209-7144",
-        waText:"Bonjour Winlab ! J’aimerais une info sur une réparation."
-      },
-      es: {
-        tagline: "Reparo • Compro • Vendo — Celulares y consolas",
-        kicker: "📍 Waterloo, QC • Abierto todos los días",
-        headline: "Reparación de celulares y consolas, rápido.",
-        sub: "Winlab vende, compra y repara celulares, y también reparamos consolas de juegos. Visítanos o escríbenos por WhatsApp.",
-        call: "📞 Llamar",
-        email: "✉️ Correo",
-        hoursTitle:"Horario", hoursText:"Todos los días • 8:00 – 20:00",
-        addrTitle:"Dirección", addrText:"275 Rue Western, Waterloo QC",
-        phoneTitle:"Teléfono", phoneText:"+1 (450) 209-7144",
-        s1t:"📱 Reparación de celulares", s1d:"Pantalla, batería, carga, diagnóstico, software.",
-        s2t:"🎮 Reparación de consolas", s2d:"PlayStation, Xbox, Nintendo — limpieza, sobrecalentamiento, puertos, etc.",
-        s3t:"💰 Compra y venta", s3d:"Compramos y vendemos teléfonos — consulta disponibilidad.",
-        revTitle:"Reseñas en Google",
-        revText:"Una reseña en Google nos ayuda mucho a crecer. ¡Gracias! 🙏",
-        revBtn:"⭐ Dejar reseña",
-        foot:"Abierto todos los días 8:00–20:00 • 275 Rue Western, Waterloo QC • 450-209-7144",
-        waText:"Hola Winlab! Quisiera información sobre una reparación."
-      },
-      en: {
-        tagline: "Repair • Buy • Sell — Phones & Game Consoles",
-        kicker: "📍 Waterloo, QC • Open every day",
-        headline: "Phone & console repairs, fast.",
-        sub: "Winlab buys, sells, and repairs phones, and we also repair game consoles. Visit us or message us on WhatsApp.",
-        call: "📞 Call",
-        email: "✉️ Email",
-        hoursTitle:"Hours", hoursText:"Every day • 8:00 AM – 8:00 PM",
-        addrTitle:"Address", addrText:"275 Rue Western, Waterloo QC",
-        phoneTitle:"Phone", phoneText:"+1 (450) 209-7144",
-        s1t:"📱 Phone repairs", s1d:"Screen, battery, charging, diagnostics, software issues.",
-        s2t:"🎮 Console repairs", s2d:"PlayStation, Xbox, Nintendo — cleaning, overheating, ports, and more.",
-        s3t:"💰 Buy & sell", s3d:"We buy and sell phones — ask for availability.",
-        revTitle:"Google Reviews",
-        revText:"A Google review helps us grow a lot. Thank you! 🙏",
-        revBtn:"⭐ Leave a review",
-        foot:"Open every day 8:00 AM–8:00 PM • 275 Rue Western, Waterloo QC • 450-209-7144",
-        waText:"Hi Winlab! I’d like information about a repair."
-      }
-    };
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.getElementById("title").textContent = translations[lang].title;
+  document.getElementById("desc").textContent = translations[lang].desc;
 
-    function setLang(lang){
-      document.documentElement.lang = lang;
-      const d = t[lang];
+  document.querySelectorAll(".flag-btn").forEach(btn=>{
+    btn.classList.toggle("active", btn.dataset.lang === lang);
+  });
+}
 
-      document.getElementById("tagline").textContent = d.tagline;
-      document.getElementById("kicker").textContent = d.kicker;
-      document.getElementById("headline").textContent = d.headline;
-      document.getElementById("sub").textContent = d.sub;
+document.querySelectorAll(".flag-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    setLang(btn.dataset.lang);
+  });
+});
+</script>
 
-      document.getElementById("callBtn").textContent = d.call;
-      document.getElementById("emailBtn").textContent = d.email;
-
-      document.getElementById("hoursTitle").textContent = d.hoursTitle;
-      document.getElementById("hoursText").textContent = d.hoursText;
-
-      document.getElementById("addrTitle").textContent = d.addrTitle;
-      document.getElementById("addrText").textContent = d.addrText;
-
-      document.getElementById("phoneTitle").textContent = d.phoneTitle;
-      document.getElementById("phoneText").textContent = d.phoneText;
-
-      document.getElementById("s1t").textContent = d.s1t;
-      document.getElementById("s1d").textContent = d.s1d;
-
-      document.getElementById("s2t").textContent = d.s2t;
-      document.getElementById("s2d").textContent = d.s2d;
-
-      document.getElementById("s3t").textContent = d.s3t;
-      document.getElementById("s3d").textContent = d.s3d;
-
-      document.getElementById("revTitle").textContent = d.revTitle;
-      document.getElementById("revText").textContent = d.revText;
-      document.getElementById("revBtn").textContent = d.revBtn;
-      document.getElementById("revBtn").href = reviewLink;
-
-      document.getElementById("foot").textContent = d.foot;
-
-      // Update WhatsApp text
-      const waLink = "https://wa.me/14502097144?text=" + encodeURIComponent(d.waText);
-      document.getElementById("waBtn").href = waLink;
-      document.querySelector(".fab").href = waLink;
-
-      localStorage.setItem("winlab_lang", lang);
-
-      document.querySelectorAll(".lang button").forEach(b=>{
-        b.classList.toggle("active", b.dataset.lang === lang);
-      });
-    }
-
-    document.querySelectorAll(".lang button").forEach(btn=>{
-      btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
-    });
-
-    const saved = localStorage.getItem("winlab_lang") || "fr";
-    setLang(saved);
-  </script>
 </body>
 </html>
