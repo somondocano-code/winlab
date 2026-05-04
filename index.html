@@ -19,65 +19,6 @@
     gtag("config", "G-B93L8HLN87");
   </script>
 
-  <meta property="og:locale" content="fr_CA" />
-  <meta property="og:title" content="Winlab | Réparation de Cellulaires à Waterloo, QC | Experts iPhone et Samsung" />
-  <meta property="og:description" content="Besoin de réparer votre cellulaire à Waterloo? Winlab offre un service rapide et fiable pour écrans cassés, batteries endommagées et plus. Garantie sur les réparations! Appelez-nous ou visitez-nous." />
-  <meta property="og:image" content="https://www.winlab.ca/images/logo-winlab.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.winlab.ca/" />
-  <meta property="og:site_name" content="Winlab Cellphone Repair" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Winlab | Réparation de Cellulaires à Waterloo, QC | iPhone, Samsung, Mac" />
-  <meta name="twitter:description" content="Service rapide de réparation de cellulaires à Waterloo. Nous réparons écrans, batteries et plus. Techniciens experts et garantie!" />
-  <meta name="twitter:image" content="https://www.winlab.ca/images/logo-winlab.jpg" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ElectronicsStore",
-    "name": "Winlab - Réparation de Cellulaires",
-    "url": "https://www.winlab.ca/",
-    "image": "https://www.winlab.ca/images/logo-winlab.jpg",
-    "telephone": "+1-450-209-7144",
-    "email": "info@winlab.ca",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "275 Rue Western",
-      "addressLocality": "Waterloo",
-      "addressRegion": "QC",
-      "postalCode": "J0E 2N0",
-      "addressCountry": "CA"
-    },
-    "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Waterloo"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Estrie"
-      }
-    ],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "08:00",
-        "closes": "20:00"
-      }
-    ],
-    "priceRange": "$$",
-    "description": "Réparation professionnelle de cellulaires à Waterloo, Québec. Experts iPhone, Samsung et Mac. Diagnostic rapide et garantie.",
-    "sameAs": [
-      "https://instagram.com/winlabqc/",
-      "https://www.facebook.com/share/18MWWSutzW/"
-    ]
-  }
-  </script>
-
   <style>
     :root{
       --bg:#0b0f1a;
@@ -257,6 +198,39 @@
     }
     @media (max-width:900px){.grid{grid-template-columns:1fr}}
 
+    /* Estilos para la galería */
+    .gallery-img-container {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .gallery-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-img-container:hover img {
+      transform: scale(1.08);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(transparent, rgba(11, 15, 26, 0.9));
+      padding: 15px;
+      font-weight: 600;
+      font-size: 14px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .gallery-img-container:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
     .svc{padding:24px}
     .svc h3{margin:0 0 12px;font-size:19px}
     .svc p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
@@ -418,6 +392,30 @@
         </div>
       </section>
 
+      <!-- NUEVA SECCIÓN DE GALERÍA -->
+      <section class="section" aria-labelledby="gallery-title">
+        <h2 class="sectionHead fade" id="gallery-title">Notre Laboratoire en Action</h2>
+        <p class="sectionText fade" id="gallery-sub">Interventions de précision, micro-soudure et réparations complexes.</p>
+        
+        <div class="grid">
+          <!-- Foto 1 -->
+          <div class="gallery-img-container shadow-[0_0_15px_rgba(56,189,248,0.1)] hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=600&auto=format&fit=crop" alt="Micro-soudure">
+            <div class="gallery-caption fade" id="gal-1">Micro-soudure et diagnostic de carte mère</div>
+          </div>
+          <!-- Foto 2 -->
+          <div class="gallery-img-container shadow-[0_0_15px_rgba(56,189,248,0.1)] hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+            <img src="https://images.unsplash.com/photo-1588508065123-287b28e01397?q=80&w=600&auto=format&fit=crop" alt="Réparation de cellulaire">
+            <div class="gallery-caption fade" id="gal-2">Remplacement d'écran et batterie certifiée</div>
+          </div>
+          <!-- Foto 3 -->
+          <div class="gallery-img-container shadow-[0_0_15px_rgba(56,189,248,0.1)] hover:shadow-[0_0_20px_rgba(56,189,248,0.4)]">
+            <img src="https://images.unsplash.com/photo-1628126235206-5260b9ea6441?q=80&w=600&auto=format&fit=crop" alt="Pièces d'origine">
+            <div class="gallery-caption fade" id="gal-3">Interventions avancées sur consoles et PC</div>
+          </div>
+        </div>
+      </section>
+
       <section class="section card svc" aria-labelledby="why-title">
         <h2 class="sectionHead fade" id="why-title">Pourquoi Choisir Winlab pour Réparer votre Cellulaire à Waterloo, QC?</h2>
         <ul class="serviceList fade" id="why-list">
@@ -560,6 +558,13 @@
         s2d: "PC et Mac : problèmes de performance, batterie, écran, clavier, stockage, système d'exploitation, nettoyage et diagnostic complet.",
         s3t: "🎮 Réparation de Consoles",
         s3d: "PlayStation, Xbox et Nintendo : surchauffe, ports HDMI, ventilateurs, nettoyage et autres pannes techniques.",
+        
+        galleryTitle: "Notre Laboratoire en Action",
+        gallerySub: "Interventions de précision, micro-soudure et réparations complexes.",
+        gal1: "Micro-soudure et diagnostic de carte mère",
+        gal2: "Remplacement d'écran et batterie certifiée",
+        gal3: "Interventions avancées sur consoles et PC",
+
         whyTitle: "Pourquoi Choisir Winlab pour Réparer votre Cellulaire à Waterloo, QC?",
         whyList: [
           "<strong>Techniciens Experts Certifiés :</strong> Des années d'expérience dans la réparation d'iPhone et de Samsung.",
@@ -622,6 +627,13 @@
         s2d: "PC y Mac: problemas de rendimiento, batería, pantalla, teclado, almacenamiento, sistema operativo, limpieza y diagnóstico completo.",
         s3t: "🎮 Reparación de Consolas",
         s3d: "PlayStation, Xbox y Nintendo: sobrecalentamiento, puertos HDMI, ventiladores, limpieza y otras fallas técnicas.",
+        
+        galleryTitle: "Nuestro Laboratorio en Acción",
+        gallerySub: "Intervenciones de precisión, micro-soldadura y reparaciones complejas.",
+        gal1: "Micro-soldadura y diagnóstico de placa base",
+        gal2: "Cambio de pantalla y batería certificada",
+        gal3: "Intervenciones avanzadas en consolas y PC",
+
         whyTitle: "¿Por qué Elegir Winlab para Reparar tu Celular en Waterloo, QC?",
         whyList: [
           "<strong>Técnicos Expertos Certificados:</strong> Años de experiencia reparando iPhone y Samsung.",
@@ -684,6 +696,13 @@
         s2d: "PC and Mac: performance issues, battery, screen, keyboard, storage, operating system, cleaning, and complete diagnosis.",
         s3t: "🎮 Console Repair",
         s3d: "PlayStation, Xbox, and Nintendo: overheating, HDMI ports, fans, cleaning, and more.",
+        
+        galleryTitle: "Our Laboratory in Action",
+        gallerySub: "Precision interventions, micro-soldering, and complex repairs.",
+        gal1: "Micro-soldering and motherboard diagnostics",
+        gal2: "Screen replacement and certified battery",
+        gal3: "Advanced interventions on consoles and PCs",
+
         whyTitle: "Why Choose Winlab for Your Cellphone Repair in Waterloo, QC?",
         whyList: [
           "<strong>Expert Certified Technicians:</strong> Years of experience repairing iPhone and Samsung.",
@@ -740,6 +759,7 @@
         "hoursTitle","hoursText","addrTitle","addrText","phoneTitle","phoneText",
         "serviceAreaTitle","serviceAreaText","services-intro",
         "s1t","s1d","s2t","s2d","s3t","s3d",
+        "gallery-title", "gallery-sub", "gal-1", "gal-2", "gal-3",
         "why-title","areas-title","areas-text",
         "faq-title","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","foot",
         "quote-title", "label-device", "opt-select", "opt-cell", "opt-pc", "opt-console", 
@@ -784,6 +804,13 @@
         setText("s2d", d.s2d);
         setText("s3t", d.s3t);
         setText("s3d", d.s3d);
+        
+        setText("gallery-title", d.galleryTitle);
+        setText("gallery-sub", d.gallerySub);
+        setText("gal-1", d.gal1);
+        setText("gal-2", d.gal2);
+        setText("gal-3", d.gal3);
+
         setText("why-title", d.whyTitle);
         setList("why-list", d.whyList);
         setText("areas-title", d.areasTitle);
