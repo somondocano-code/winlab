@@ -85,8 +85,8 @@
       --card2:#0f1727;
       --text:#e9eefc;
       --muted:#b9c2db;
-      --accent:#0047AB; /* Bleu Cobalt tiré du logo */
-      --accent2:#00C853; /* Vert Vif tiré du logo */
+      --accent:#0047AB; 
+      --accent2:#00C853; 
       --border:rgba(255,255,255,.12);
       --shadow:0 18px 60px rgba(0,0,0,.35);
       --radius:18px;
@@ -196,7 +196,6 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
-    /* Efecto Hover para hacerlo más dinámico */
     article.card:hover, .faqItem:hover {
         transform: translateY(-4px);
         box-shadow: 0 25px 50px rgba(0,0,0,.45);
@@ -232,6 +231,7 @@
     .btn.whatsapp{
       background:rgba(0,200,83,.18);
       border-color:rgba(0,200,83,.55);
+      color: inherit;
     }
 
     .mini{
@@ -280,7 +280,6 @@
     .faqItem h3{ margin:0 0 10px; font-size:18px; }
     .faqItem p{ margin:0; color:var(--muted); font-size:15px; }
 
-    /* Estilos del Formulario de Cotización */
     .quote-form { display: grid; gap: 16px; margin-top: 20px; }
     .form-group { display: flex; flex-direction: column; text-align: left; }
     .form-group label { margin-bottom: 8px; font-weight: 600; font-size: 14px; color: var(--text); }
@@ -301,15 +300,6 @@
       color:var(--muted); font-size:14px; margin:32px 0 10px;
       display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
     }
-
-    .fab{
-      position:fixed; right:18px; bottom:18px; z-index:999;
-      text-decoration:none; padding:14px 16px; border-radius:999px;
-      font-weight:800; border:1px solid rgba(0,200,83,.7); 
-      background:rgba(0,200,83,.22); box-shadow:var(--shadow);
-      backdrop-filter:blur(10px); transition: transform .2s ease-in-out;
-    }
-    .fab:hover { transform: scale(1.05); }
 
     .fade{transition:opacity .25s ease,transform .25s ease}
     .fade.out{opacity:0;transform:translateY(2px)}
@@ -379,10 +369,8 @@
 
           <div class="ctaRow">
             <a class="btn primary fade" id="callBtn" href="tel:+14502097144">📞 Appeler Maintenant! (450) 209-7144</a>
-            <a class="btn whatsapp fade" id="waBtn" target="_blank" rel="noopener"
-                href="https://wa.me/14502097144">
-              💬 WhatsApp
-            </a>
+            <!-- Aquí reemplazamos WhatsApp por Tawk.to -->
+            <button class="btn whatsapp fade" id="chatBtn" onclick="Tawk_API.toggle()">💬 Chat en Direct</button>
             <a class="btn fade" id="emailBtn" href="mailto:info@winlab.ca">✉️ Envoyer un Courriel</a>
           </div>
         </div>
@@ -503,7 +491,7 @@
 
           <article class="faqItem">
             <h3 class="fade" id="f4q">Ai-je besoin d'un rendez-vous pour réparer mon cellulaire à Waterloo, QC?</h3>
-            <p class="fade" id="f4a">Non, vous pouvez nous visiter directement à notre boutique à Waterloo, QC, ou nous contacter par téléphone ou WhatsApp pour un meilleur service.</p>
+            <p class="fade" id="f4a">Non, vous pouvez nous visiter directement à notre boutique à Waterloo, QC, ou nous contacter par téléphone ou via notre chat pour un meilleur service.</p>
           </article>
         </div>
       </section>
@@ -525,12 +513,6 @@
     </footer>
   </div>
 
-  <a class="fab" target="_blank" rel="noopener"
-     href="https://wa.me/14502097144"
-     aria-label="Contacter Winlab sur WhatsApp">
-    💬 WhatsApp
-  </a>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -543,6 +525,7 @@
         headline: "Réparation de Cellulaires à Waterloo, QC | iPhone, Samsung, Mac | Winlab",
         sub: "Votre cellulaire a un écran cassé ou une batterie défectueuse? Chez Winlab, nous offrons des réparations professionnelles et rapides à Waterloo, Québec. Techniciens certifiés, garantie sur toutes les réparations et diagnostic précis. Faites-nous confiance pour redonner vie à votre appareil!",
         call: "📞 Appeler Maintenant! (450) 209-7144",
+        chatText: "💬 Chat en Direct",
         email: "✉️ Envoyer un Courriel",
         hoursTitle: "Heures d'Ouverture Étendues",
         hoursText: "Tous les jours | 8:00 – 20:00 | Ouvert pour vous!",
@@ -577,11 +560,9 @@
         f3q: "Offrez-vous une garantie sur les réparations de cellulaires à Waterloo, QC?",
         f3a: "Oui, toutes nos réparations de cellulaires chez Winlab incluent une garantie pour votre tranquillité d'esprit et votre confiance.",
         f4q: "Ai-je besoin d'un rendez-vous pour réparer mon cellulaire à Waterloo, QC?",
-        f4a: "Non, vous pouvez nous visiter directement à notre boutique à Waterloo, QC, ou nous contacter par téléphone ou WhatsApp pour un meilleur service.",
+        f4a: "Non, vous pouvez nous visiter directement à notre boutique à Waterloo, QC, ou nous contacter par téléphone ou via notre chat pour un meilleur service.",
         foot: "Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144",
-        waText: "Bonjour Winlab! J’ai un problème avec mon cellulaire (modèle et description). Pouvez-vous m’aider?",
         
-        /* Textos del Formulario en Francés */
         quoteTitle: "Demandez un Devis Gratuit",
         labelDevice: "Type d'appareil",
         optSelect: "Sélectionnez une option...",
@@ -602,6 +583,7 @@
         headline: "Reparación de Celulares en Waterloo, QC | iPhone, Samsung, Mac | Winlab",
         sub: "¿Tu celular tiene la pantalla rota o la batería dañada? En Winlab ofrecemos reparaciones profesionales y rápidas en Waterloo, Quebec. Técnicos certificados, garantía en todas las reparaciones y diagnóstico preciso. ¡Confía en nosotros para devolverle la vida a tu dispositivo!",
         call: "📞 ¡Llamar Ahora! (450) 209-7144",
+        chatText: "💬 Chat en Vivo",
         email: "✉️ Enviar un Correo",
         hoursTitle: "Horarios Amplios",
         hoursText: "Todos los días | 8:00 – 20:00 | ¡Abierto para ti!",
@@ -636,11 +618,9 @@
         f3q: "¿Tienen garantía en las reparaciones de celulares en Waterloo, QC?",
         f3a: "Sí, todas nuestras reparaciones de celulares en Winlab incluyen garantía para tu tranquilidad y confianza.",
         f4q: "¿Necesito cita para reparar mi celular en Waterloo, QC?",
-        f4a: "No, puedes visitarnos directamente en nuestra tienda en Waterloo, QC, o contactarnos por teléfono o WhatsApp para un mejor servicio.",
+        f4a: "No, puedes visitarnos directamente en nuestra tienda en Waterloo, QC, o contactarnos por teléfono o mediante nuestro chat para un mejor servicio.",
         foot: "Abierto todos los días | 8:00–20:00 | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144",
-        waText: "Hola Winlab! Tengo un problema con mi celular (modelo y descripción). ¿Me pueden ayudar?",
         
-        /* Textos del Formulario en Español */
         quoteTitle: "Obtén un Presupuesto Gratuito",
         labelDevice: "Tipo de dispositivo",
         optSelect: "Selecciona una opción...",
@@ -661,6 +641,7 @@
         headline: "Cellphone Repair in Waterloo, QC | iPhone, Samsung, Mac | Winlab",
         sub: "Broken screen or damaged battery? At Winlab, we provide professional and fast repairs in Waterloo, Quebec. Certified technicians, warranty on all repairs, and accurate diagnosis. Trust us to bring your device back to life!",
         call: "📞 Call Now! (450) 209-7144",
+        chatText: "💬 Live Chat",
         email: "✉️ Send an Email",
         hoursTitle: "Convenient Hours",
         hoursText: "Every Day | 8:00 – 20:00 | Open for you!",
@@ -695,11 +676,9 @@
         f3q: "Do you offer a warranty on cellphone repairs in Waterloo, QC?",
         f3a: "Yes, all our cellphone repairs at Winlab include a warranty for your peace of mind and confidence.",
         f4q: "Do I need an appointment for cellphone repair in Waterloo, QC?",
-        f4a: "No, you can visit us directly at our shop in Waterloo, QC, or contact us by phone or WhatsApp for better service.",
+        f4a: "No, you can visit us directly at our shop in Waterloo, QC, or contact us by phone or via our live chat for better service.",
         foot: "Open Every Day | 8:00–20:00 | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144",
-        waText: "Hello Winlab! I have a problem with my cellphone (model and description). Can you help me?",
         
-        /* Textos del Formulario en Inglés */
         quoteTitle: "Get a Free Quote",
         labelDevice: "Device Type",
         optSelect: "Select an option...",
@@ -727,13 +706,12 @@
 
     function setLang(lang) {
       const ids = [
-        "tagline","kicker","headline","sub","callBtn","emailBtn",
+        "tagline","kicker","headline","sub","callBtn","chatBtn","emailBtn",
         "hoursTitle","hoursText","addrTitle","addrText","phoneTitle","phoneText",
         "serviceAreaTitle","serviceAreaText","services-intro",
         "s1t","s1d","s2t","s2d","s3t","s3d",
         "why-title","areas-title","areas-text",
         "faq-title","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","foot",
-        /* Nuevos IDs del formulario */
         "quote-title", "label-device", "opt-select", "opt-cell", "opt-pc", "opt-console", 
         "label-brand", "label-issue", "btn-submit"
       ];
@@ -759,6 +737,7 @@
         setText("headline", d.headline);
         setText("sub", d.sub);
         setText("callBtn", d.call);
+        setText("chatBtn", d.chatText);
         setText("emailBtn", d.email);
         setText("hoursTitle", d.hoursTitle);
         setText("hoursText", d.hoursText);
@@ -790,7 +769,6 @@
         setText("f4a", d.f4a);
         setText("foot", d.foot);
 
-        /* Actualizar formulario */
         setText("quote-title", d.quoteTitle);
         setText("label-device", d.labelDevice);
         setText("opt-select", d.optSelect);
@@ -801,13 +779,8 @@
         setText("label-issue", d.labelIssue);
         setText("btn-submit", d.btnSubmit);
         
-        /* Traducir los placeholders */
         document.getElementById("marca").placeholder = d.phBrand;
         document.getElementById("problema").placeholder = d.phIssue;
-
-        const waLink = "https://wa.me/14502097144?text=" + encodeURIComponent(d.waText);
-        document.getElementById("waBtn").href = waLink;
-        document.querySelector(".fab").href = waLink;
 
         document.querySelectorAll(".lang button").forEach(b => {
           b.classList.toggle("active", b.dataset.lang === lang);
@@ -829,5 +802,19 @@
     const saved = localStorage.getItem("winlab_lang") || "fr";
     setLang(saved);
   </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69f89c87e8e05f1c325a25be/1jnpi6srl';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>
