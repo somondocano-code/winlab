@@ -369,7 +369,6 @@
 
           <div class="ctaRow">
             <a class="btn primary fade" id="callBtn" href="tel:+14502097144">📞 Appeler Maintenant! (450) 209-7144</a>
-            <!-- Aquí reemplazamos WhatsApp por Tawk.to -->
             <button class="btn whatsapp fade" id="chatBtn" onclick="Tawk_API.toggle()">💬 Chat en Direct</button>
             <a class="btn fade" id="emailBtn" href="mailto:info@winlab.ca">✉️ Envoyer un Courriel</a>
           </div>
@@ -430,26 +429,41 @@
         </ul>
       </section>
       
+      <!-- FORMULARIO CORREGIDO CON FORMSUBMIT -->
       <section class="section card svc" aria-labelledby="quote-title">
         <h2 class="sectionHead fade" id="quote-title">Demandez un Devis Gratuit</h2>
-        <form class="quote-form">
+        <form class="quote-form" action="https://formsubmit.co/info@winlab.ca" method="POST">
+          <!-- Configuraciones invisibles -->
+          <input type="hidden" name="_subject" value="Nouveau Devis Web - Winlab.ca">
+          <input type="hidden" name="_next" value="https://www.winlab.ca/">
+          <input type="hidden" name="_captcha" value="false">
+
           <div class="form-group">
             <label for="dispositivo" class="fade" id="label-device">Type d'appareil</label>
-            <select id="dispositivo" class="form-control" required>
+            <select id="dispositivo" name="Type_Appareil" class="form-control" required>
               <option value="" disabled selected class="fade" id="opt-select">Sélectionnez une option...</option>
-              <option value="celular" class="fade" id="opt-cell">Cellulaire / Smartphone</option>
-              <option value="computadora" class="fade" id="opt-pc">Ordinateur (Portable / Bureau)</option>
-              <option value="consola" class="fade" id="opt-console">Console de Jeux</option>
+              <option value="Cellulaire" class="fade" id="opt-cell">Cellulaire / Smartphone</option>
+              <option value="Ordinateur" class="fade" id="opt-pc">Ordinateur (Portable / Bureau)</option>
+              <option value="Console" class="fade" id="opt-console">Console de Jeux</option>
             </select>
           </div>
+          
           <div class="form-group">
             <label for="marca" class="fade" id="label-brand">Marque et Modèle</label>
-            <input type="text" id="marca" class="form-control" placeholder="Ex: iPhone 13, PS5, Dell Inspiron..." required>
+            <input type="text" id="marca" name="Marque_Modele" class="form-control" placeholder="Ex: iPhone 13, PS5, Dell Inspiron..." required>
           </div>
+
+          <!-- NUEVO CAMPO: CORREO DEL CLIENTE -->
+          <div class="form-group">
+            <label for="correo" class="fade" id="label-email">Votre Courriel (Email)</label>
+            <input type="email" id="correo" name="Email_Client" class="form-control" placeholder="client@email.com" required>
+          </div>
+
           <div class="form-group">
             <label for="problema" class="fade" id="label-issue">Description du problème</label>
-            <textarea id="problema" class="form-control" rows="3" placeholder="Décrivez brièvement la panne..." required></textarea>
+            <textarea id="problema" name="Description_Probleme" class="form-control" rows="3" placeholder="Décrivez brièvement la panne..." required></textarea>
           </div>
+          
           <button type="submit" class="btn primary fade" id="btn-submit" style="width:100%; justify-content:center; margin-top:10px;">
             Envoyer la Demande
           </button>
@@ -571,6 +585,8 @@
         optConsole: "Console de Jeux",
         labelBrand: "Marque et Modèle",
         phBrand: "Ex: iPhone 13, PS5, Dell Inspiron...",
+        labelEmail: "Votre Courriel (Email)",
+        phEmail: "client@email.com",
         labelIssue: "Description du problème",
         phIssue: "Décrivez brièvement la panne...",
         btnSubmit: "Envoyer la Demande"
@@ -629,6 +645,8 @@
         optConsole: "Consola de Videojuegos",
         labelBrand: "Marca y Modelo",
         phBrand: "Ej: iPhone 13, PS5, Dell Inspiron...",
+        labelEmail: "Tu Correo Electrónico",
+        phEmail: "cliente@email.com",
         labelIssue: "Descripción del problema",
         phIssue: "Describe brevemente la falla...",
         btnSubmit: "Solicitar Presupuesto"
@@ -687,6 +705,8 @@
         optConsole: "Gaming Console",
         labelBrand: "Brand and Model",
         phBrand: "Ex: iPhone 13, PS5, Dell Inspiron...",
+        labelEmail: "Your Email Address",
+        phEmail: "client@email.com",
         labelIssue: "Issue Description",
         phIssue: "Briefly describe the problem...",
         btnSubmit: "Request Quote"
@@ -713,7 +733,7 @@
         "why-title","areas-title","areas-text",
         "faq-title","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","foot",
         "quote-title", "label-device", "opt-select", "opt-cell", "opt-pc", "opt-console", 
-        "label-brand", "label-issue", "btn-submit"
+        "label-brand", "label-email", "label-issue", "btn-submit"
       ];
 
       ids.forEach(id => {
@@ -776,10 +796,12 @@
         setText("opt-pc", d.optPc);
         setText("opt-console", d.optConsole);
         setText("label-brand", d.labelBrand);
+        setText("label-email", d.labelEmail);
         setText("label-issue", d.labelIssue);
         setText("btn-submit", d.btnSubmit);
         
         document.getElementById("marca").placeholder = d.phBrand;
+        document.getElementById("correo").placeholder = d.phEmail;
         document.getElementById("problema").placeholder = d.phIssue;
 
         document.querySelectorAll(".lang button").forEach(b => {
