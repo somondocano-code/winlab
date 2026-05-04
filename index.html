@@ -429,10 +429,9 @@
         </ul>
       </section>
       
-      <!-- FORMULARIO CORREGIDO CON FORMSUBMIT -->
       <section class="section card svc" aria-labelledby="quote-title">
         <h2 class="sectionHead fade" id="quote-title">Demandez un Devis Gratuit</h2>
-        <form class="quote-form" action="https://formsubmit.co/info@winlab.ca" method="POST">
+        <form class="quote-form" action="https://formsubmit.co/info@winlab.ca" method="POST" enctype="multipart/form-data">
           <!-- Configuraciones invisibles -->
           <input type="hidden" name="_subject" value="Nouveau Devis Web - Winlab.ca">
           <input type="hidden" name="_next" value="https://www.winlab.ca/">
@@ -453,7 +452,6 @@
             <input type="text" id="marca" name="Marque_Modele" class="form-control" placeholder="Ex: iPhone 13, PS5, Dell Inspiron..." required>
           </div>
 
-          <!-- NUEVO CAMPO: CORREO DEL CLIENTE -->
           <div class="form-group">
             <label for="correo" class="fade" id="label-email">Votre Courriel (Email)</label>
             <input type="email" id="correo" name="Email_Client" class="form-control" placeholder="client@email.com" required>
@@ -462,6 +460,12 @@
           <div class="form-group">
             <label for="problema" class="fade" id="label-issue">Description du problème</label>
             <textarea id="problema" name="Description_Probleme" class="form-control" rows="3" placeholder="Décrivez brièvement la panne..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="archivo" class="fade" id="label-file">Joindre une photo (Optionnel)</label>
+            <input type="file" id="archivo" name="Photo_Appareil" class="form-control" accept="image/*, .pdf" style="background: rgba(255,255,255,.02); border: 1px dashed var(--border);">
+            <small class="fade" id="sub-file" style="color: var(--muted); font-size: 12px; margin-top: 4px;">Formats acceptés : JPG, PNG ou PDF</small>
           </div>
           
           <button type="submit" class="btn primary fade" id="btn-submit" style="width:100%; justify-content:center; margin-top:10px;">
@@ -589,6 +593,8 @@
         phEmail: "client@email.com",
         labelIssue: "Description du problème",
         phIssue: "Décrivez brièvement la panne...",
+        labelFile: "Joindre une photo (Optionnel)",
+        subFile: "Formats acceptés : JPG, PNG ou PDF",
         btnSubmit: "Envoyer la Demande"
       },
       es: {
@@ -649,6 +655,8 @@
         phEmail: "cliente@email.com",
         labelIssue: "Descripción del problema",
         phIssue: "Describe brevemente la falla...",
+        labelFile: "Adjuntar una foto (Opcional)",
+        subFile: "Formatos aceptados: JPG, PNG o PDF",
         btnSubmit: "Solicitar Presupuesto"
       },
       en: {
@@ -709,6 +717,8 @@
         phEmail: "client@email.com",
         labelIssue: "Issue Description",
         phIssue: "Briefly describe the problem...",
+        labelFile: "Attach a photo (Optional)",
+        subFile: "Accepted formats: JPG, PNG or PDF",
         btnSubmit: "Request Quote"
       }
     };
@@ -733,7 +743,7 @@
         "why-title","areas-title","areas-text",
         "faq-title","f1q","f1a","f2q","f2a","f3q","f3a","f4q","f4a","foot",
         "quote-title", "label-device", "opt-select", "opt-cell", "opt-pc", "opt-console", 
-        "label-brand", "label-email", "label-issue", "btn-submit"
+        "label-brand", "label-email", "label-issue", "label-file", "sub-file", "btn-submit"
       ];
 
       ids.forEach(id => {
@@ -798,6 +808,8 @@
         setText("label-brand", d.labelBrand);
         setText("label-email", d.labelEmail);
         setText("label-issue", d.labelIssue);
+        setText("label-file", d.labelFile);
+        setText("sub-file", d.subFile);
         setText("btn-submit", d.btnSubmit);
         
         document.getElementById("marca").placeholder = d.phBrand;
