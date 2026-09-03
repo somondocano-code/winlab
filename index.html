@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0b0f1a" />
+  <meta name="theme-color" content="#0f172a" />
 
-  <title>Winlab | Réparation de Cellulaires iPhone, Samsung, Mac</title>
-  <meta name="description" content="Écran cassé? Batterie déchargée? Winlab offre une réparation professionnelle de cellulaires à Waterloo, Québec. Techniciens experts pour iPhone, Samsung et plus. Diagnostic rapide, garantie sur les réparations et service fiable. Visitez-nous ou appelez dès aujourd'hui!" />
+  <title>Winlab | Réparation Professionnelle de Cellulaires, Ordinateurs & Consoles</title>
+  <meta name="description" content="Écran cassé? Batterie déchargée? Winlab offre une réparation professionnelle et soignée. Spécialiste iPhone, Samsung, Mac et micro-soudure. Diagnostic rapide et travail garanti!" />
   <meta name="robots" content="index,follow" />
-  <meta name="keywords" content="réparation cellulaire, réparation de cellulaires Waterloo Québec, réparation iPhone Waterloo, réparation Samsung Waterloo, Winlab Waterloo, réparation de téléphones Waterloo QC, réparation Estrie" />
+  <meta name="keywords" content="réparation cellulaire, réparation iPhone, réparation Samsung, Winlab, réparation téléphones, micro-soudure, réparation écran" />
   <link rel="canonical" href="https://www.winlab.ca/" />
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B93L8HLN87"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,9 +20,10 @@
     gtag("config", "G-B93L8HLN87");
   </script>
 
+  <!-- Open Graph -->
   <meta property="og:locale" content="fr_CA" />
-  <meta property="og:title" content="Winlab | Réparation de Cellulaires à Waterloo, QC | Experts iPhone et Samsung" />
-  <meta property="og:description" content="Besoin de réparer votre cellulaire à Waterloo? Winlab offre un service rapide et fiable pour écrans cassés, batteries endommagées et plus. Garantie sur les réparations! Appelez-nous ou visitez-nous." />
+  <meta property="og:title" content="Winlab | Réparation de Cellulaires, PC & Consoles | Experts Certifiés" />
+  <meta property="og:description" content="Service rapide et garanti de réparation d'appareils électroniques. Écrans Soft OLED/OEM, batteries, micro-soudure et ordinateurs." />
   <meta property="og:image" content="https://www.winlab.ca/images/logo-winlab.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -29,11 +31,13 @@
   <meta property="og:url" content="https://www.winlab.ca/" />
   <meta property="og:site_name" content="Winlab Cellphone Repair" />
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Winlab | Réparation de Cellulaires à Waterloo, QC | iPhone, Samsung, Mac" />
-  <meta name="twitter:description" content="Service rapide de réparation de cellulaires à Waterloo. Nous réparons écrans, batteries et plus. Techniciens experts et garantie!" />
+  <meta name="twitter:title" content="Winlab | Réparation de Cellulaires, PC & Consoles" />
+  <meta name="twitter:description" content="Service rapide de réparation d'appareils électroniques. Techniciens experts et garantie!" />
   <meta name="twitter:image" content="https://www.winlab.ca/images/logo-winlab.jpg" />
 
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,16 +55,6 @@
       "postalCode": "J0E 2N0",
       "addressCountry": "CA"
     },
-    "areaServed": [
-      {
-        "@type": "AdministrativeArea",
-        "name": "Waterloo"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Estrie"
-      }
-    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -70,7 +64,7 @@
       }
     ],
     "priceRange": "$$",
-    "description": "Réparation professionnelle de cellulaires à Waterloo, Québec. Experts iPhone, Samsung et Mac. Diagnostic rapide et garantie.",
+    "description": "Réparation professionnelle de cellulaires, ordinateurs et consoles. Micro-soudure, pièces OEM et garantie.",
     "sameAs": [
       "https://instagram.com/winlabqc/",
       "https://www.facebook.com/share/18MWWSutzW/"
@@ -78,258 +72,513 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#0b0f1a;
-      --card:#10182b;
-      --card2:#0f1727;
-      --text:#e9eefc;
-      --muted:#b9c2db;
-      --accent:#0047AB; 
-      --accent2:#00C853; 
-      --border:rgba(255,255,255,.12);
-      --shadow:0 18px 60px rgba(0,0,0,.35);
-      --radius:18px;
-      --max:1120px;
+    :root {
+      --brand-navy: #0f172a;
+      --brand-blue: #0284c7;
+      --brand-blue-hover: #0369a1;
+      --brand-emerald: #10b981;
+      --slate-body: #334155;
+      --slate-sub: #64748b;
+      --surface-light: #f8fafc;
+      --surface-white: #ffffff;
+      --line-border: #e2e8f0;
+      --gold-star: #f59e0b;
+      --radius: 16px;
+      --max: 1200px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 600px at 20% 10%, rgba(0,71,171,.25), transparent 55%),
-        radial-gradient(900px 500px at 90% 20%, rgba(0,200,83,.18), transparent 60%),
-        var(--bg);
-      line-height:1.5;
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--surface-white); color: var(--slate-body); line-height: 1.6; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* 1. TOP ANNOUNCEMENT BAR */
+    .top-status-bar {
+      background: var(--brand-navy);
+      color: #94a3b8;
+      font-size: 12.5px;
+      padding: 8px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
+    .status-badge { display: inline-flex; align-items: center; gap: 8px; color: #e2e8f0; }
+    .live-dot { width: 8px; height: 8px; background: var(--brand-emerald); border-radius: 50%; box-shadow: 0 0 8px var(--brand-emerald); }
+    .status-links a { color: #f1f5f9; text-decoration: none; margin-left: 14px; font-weight: 600; }
 
-    a{color:inherit}
-    img{max-width:100%;display:block}
-    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
-
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-      padding:10px 0 22px;
-      flex-wrap:wrap;
+    /* 2. HEADER & BRAND */
+    header {
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--line-border);
     }
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .brand-frame {
+      height: 48px;
+      background: #000000;
+      padding: 4px 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .brand-frame img { height: 100%; width: auto; }
+    .brand-copy h1 { font-size: 20px; font-weight: 800; color: var(--brand-navy); line-height: 1.1; }
+    .brand-copy p { font-size: 11.5px; color: var(--brand-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
-    .brand{display:flex;align-items:center;gap:16px}
-    
-    .logo-container {
-      width: 64px;
-      height: 64px;
-      flex: none;
+    .topRight { display: flex; gap: 14px; align-items: center; }
+    .google-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--brand-navy);
+      margin-right: 6px;
+    }
+    .google-stars { color: var(--gold-star); letter-spacing: 1px; }
+
+    .lang { display: flex; gap: 6px; align-items: center; }
+    .lang button {
+      width: 38px; height: 28px; padding: 0; border-radius: 6px;
+      border: 1px solid var(--line-border); background: var(--surface-light);
+      cursor: pointer; overflow: hidden; display: inline-flex; align-items: center; justify-content: center;
+      transition: all .2s ease;
+    }
+    .lang button img { width: 100%; height: 100%; object-fit: cover; }
+    .lang button:hover { border-color: var(--brand-blue); transform: translateY(-1px); }
+    .lang button.active { border-color: var(--brand-blue); box-shadow: 0 0 0 2px rgba(2,132,199,0.3); }
+
+    .social { display: flex; gap: 6px; align-items: center; }
+    .social-btn {
+      width: 34px; height: 28px; display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--line-border); background: var(--surface-light);
+      border-radius: 6px; text-decoration: none; transition: all .2s ease;
+    }
+    .social-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .social-btn.insta { color: #E1306C; }
+    .social-btn.fb { color: #1877f2; }
+    .social-btn:hover { border-color: #cbd5e1; transform: translateY(-1px); }
+
+    /* 3. HERO SECTION */
+    .hero-wrap {
+      margin: 30px auto 40px auto;
+      display: grid;
+      grid-template-columns: 1.15fr 1.1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-lead-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e0f2fe;
+      color: var(--brand-blue);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .heroMain h2 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--brand-navy);
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+    .heroMain h2 span { color: var(--brand-blue); display: block; }
+    .heroMain p {
+      font-size: 16px;
+      color: var(--slate-sub);
+      margin-bottom: 24px;
+      max-width: 540px;
+    }
+    .ctaRow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 22px; border-radius: 8px; font-weight: 700; font-size: 14px;
+      text-decoration: none; cursor: pointer; transition: all 0.2s ease; border: 1px solid transparent;
+    }
+    .btn.primary {
+      background: var(--brand-blue);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+    }
+    .btn.primary:hover { background: var(--brand-blue-hover); transform: translateY(-1px); }
+    .btn.whatsapp {
+      background: var(--brand-emerald);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.2);
+    }
+    .btn.whatsapp:hover { background: #059669; transform: translateY(-1px); }
+    .btn.outline {
+      background: #ffffff;
+      color: var(--brand-navy);
+      border-color: var(--line-border);
+    }
+    .btn.outline:hover { border-color: var(--brand-navy); }
+
+    /* SÉLECTION PAR CATÉGORIES */
+    .device-deck {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .device-tile {
+      background: #ffffff;
+      border: 1px solid var(--line-border);
+      border-radius: 12px;
+      padding: 14px 6px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--brand-navy);
+      transition: all 0.2s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    }
+    .device-tile:hover {
+      border-color: var(--brand-blue);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(2, 132, 199, 0.1);
+    }
+    .device-ico { font-size: 26px; margin-bottom: 4px; display: block; }
+    .device-label { font-size: 12.5px; font-weight: 700; }
+
+    /* FOTO REAL DU TALLER */
+    .hero-visual {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.15);
+      border: 1px solid var(--line-border);
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .floating-guarantee-card {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .guarantee-icon {
+      font-size: 24px;
+      background: #e0f2fe;
+      color: var(--brand-blue);
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
+    }
+    .guarantee-text strong { display: block; font-size: 13.5px; color: var(--brand-navy); }
+    .guarantee-text small { font-size: 12px; color: var(--slate-sub); }
+
+    /* 4. WORKFLOW / COMMENT ÇA MARCHE */
+    .workflow-section {
+      background: var(--surface-light);
+      border-top: 1px solid var(--line-border);
+      border-bottom: 1px solid var(--line-border);
+      padding: 55px 0;
+      text-align: center;
+      margin: 40px 0;
+    }
+    .workflow-tag {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--brand-blue);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .workflow-title { font-size: 28px; font-weight: 800; color: var(--brand-navy); margin-bottom: 8px; }
+    .workflow-desc { font-size: 15px; color: var(--slate-sub); margin-bottom: 35px; }
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .workflow-card {
+      background: #ffffff;
+      padding: 28px 20px;
+      border-radius: 14px;
+      border: 1px solid var(--line-border);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+    .step-circle {
+      width: 38px;
+      height: 38px;
+      background: #e0f2fe;
+      color: var(--brand-blue);
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px auto;
+      font-size: 15px;
+    }
+    .workflow-card h3 { font-size: 16px; font-weight: 800; color: var(--brand-navy); margin-bottom: 6px; }
+    .workflow-card p { font-size: 13px; color: var(--slate-sub); line-height: 1.4; }
+
+    /* 5. SERVICES */
+    .section { margin: 50px 0; }
+    .sectionHead { font-size: 28px; font-weight: 800; color: var(--brand-navy); margin-bottom: 10px; }
+    .sectionText { color: var(--slate-sub); font-size: 15px; margin-bottom: 25px; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card-modern {
+      background: #ffffff;
+      border: 1px solid var(--line-border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+      transition: all 0.25s ease;
+    }
+    .card-modern:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(15,23,42,0.06);
+      border-color: #cbd5e1;
+    }
+    .svc h3 { margin: 0 0 10px; font-size: 18px; font-weight: 800; color: var(--brand-navy); }
+    .svc p { color: var(--slate-sub); font-size: 13.5px; line-height: 1.6; }
+
+    /* LISTE QUALITÉ */
+    .serviceList { list-style: none; padding: 0; margin-top: 15px; }
+    .serviceList li {
+      margin: 12px 0; font-size: 14.5px; color: var(--slate-body);
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .serviceList li::before {
+      content: "✓"; color: var(--brand-blue); font-weight: 900; font-size: 16px; flex-shrink: 0;
     }
 
-    .brand h1{margin:0;font-size:22px;letter-spacing:.3px;font-weight: 800;}
-    .brand p{margin:0;color:var(--muted);font-size:13px}
-
-    .topRight{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      justify-content:flex-end;
-      flex-wrap:wrap;
-    }
-
-    .lang{display:flex;gap:8px;align-items:center}
-    .lang button{
-      width:42px;height:32px;padding:0;border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.06);
-      cursor:pointer;overflow:hidden;
-      display:inline-flex;align-items:center;justify-content:center;
-      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;
-    }
-    .lang button img{width:100%;height:100%;object-fit:cover}
-    .lang button:hover{
-      transform:translateY(-1px);
-      border-color:rgba(0,71,171,.65);
-      background:rgba(0,71,171,.12);
-    }
-    .lang button.active{
-      border-color:rgba(0,71,171,.95);
-      box-shadow:0 0 0 3px rgba(0,71,171,.22);
-    }
-
-    .social{display:flex;gap:8px;align-items:center}
-    .social-btn{
-      width:38px;height:32px;display:inline-flex;align-items:center;justify-content:center;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.06);
-      border-radius:999px;text-decoration:none;
-      transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease;
-    }
-    .social-btn svg{width:18px;height:18px;fill:currentColor;opacity:.95}
-    .social-btn.insta{color:#E1306C}
-    .social-btn.fb{color:#1877f2}
-    .social-btn:hover{
-      transform:translateY(-1px);
-      border-color:rgba(255,255,255,.22);
-      box-shadow:0 0 0 3px rgba(255,255,255,.08);
-      background:rgba(255,255,255,.08);
-    }
-
-    .hero{
-      display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width:900px){.hero{grid-template-columns:1fr}}
-
-    .card{
-      background:rgba(16,24,43,.86);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    article.card:hover, .faqItem:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 25px 50px rgba(0,0,0,.45);
-        border-color: rgba(0,71,171,.4);
-    }
-
-    .heroMain{padding:32px}
-    .kicker{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:6px 12px;border:1px solid var(--border);
-      border-radius:999px;color:var(--muted);font-size:12px;
-      background:rgba(255,255,255,.04);
-    }
-
-    .heroMain h2{margin:18px 0 14px;font-size:38px;line-height:1.1}
-    .heroMain p{margin:0;color:var(--muted);font-size:16px;max-width:68ch;margin-bottom:24px}
-
-    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:14px 18px;border-radius:14px;border:1px solid var(--border);
-      background:rgba(255,255,255,.06);text-decoration:none;font-weight:700;
-      transition:transform .2s ease,background .2s ease,border-color .2s ease;
-      cursor: pointer;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{
-      background:rgba(0,71,171,.28);
-      border-color:rgba(0,71,171,.65);
-    }
-    .btn.primary:hover { background:rgba(0,71,171,.5); }
-    
-    .btn.whatsapp{
-      background:rgba(0,200,83,.18);
-      border-color:rgba(0,200,83,.55);
-      color: inherit;
-    }
-
-    .mini{
-      display:grid;gap:12px;padding:20px;
-      grid-template-columns:1fr;
-    }
-    .pill{
-      padding:16px 14px;border-radius:14px;border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-    }
-    .pill strong{display:block;font-size:14px}
-    .pill span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
-
-    .section{ margin-top:32px; }
-    .sectionHead{ margin:0 0 16px; font-size:28px; }
-    .sectionText{ margin:0 0 20px; color:var(--muted); font-size:16px; }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:20px;
-    }
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-
-    .svc{padding:24px}
-    .svc h3{margin:0 0 12px;font-size:19px}
-    .svc p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
-
-    .serviceList{ margin:14px 0 0; padding-left:22px; color:var(--muted); font-size:15px; }
-    .serviceList li{margin:8px 0}
-
-    .areas{ display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; }
-    .areaTag{
-      padding:10px 14px; border-radius:999px;
-      border:1px solid var(--border); background:rgba(255,255,255,.04);
-      color:var(--muted); font-size:14px;
-    }
-
-    .faq{ display:grid; gap:16px; }
-    .faqItem{
-      padding:20px; border:1px solid var(--border);
-      border-radius:18px; background:rgba(255,255,255,.04);
-      transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-    .faqItem h3{ margin:0 0 10px; font-size:18px; }
-    .faqItem p{ margin:0; color:var(--muted); font-size:15px; }
-
-    .quote-form { display: grid; gap: 16px; margin-top: 20px; }
+    /* FORMULAIRE DE DEVIS */
+    .quote-form { display: grid; gap: 16px; margin-top: 15px; }
     .form-group { display: flex; flex-direction: column; text-align: left; }
-    .form-group label { margin-bottom: 8px; font-weight: 600; font-size: 14px; color: var(--text); }
+    .form-group label { margin-bottom: 6px; font-weight: 700; font-size: 13.5px; color: var(--brand-navy); }
     .form-control {
-        padding: 14px; border: 1px solid var(--border); border-radius: 12px;
-        background: rgba(255,255,255,.04); color: var(--text); font-size: 15px;
-        transition: border-color .2s ease, background .2s ease;
-        font-family: inherit;
+      padding: 12px 14px; border: 1px solid var(--line-border); border-radius: 10px;
+      background: var(--surface-light); color: var(--brand-navy); font-size: 14.5px;
+      transition: all .2s ease; font-family: inherit;
     }
-    .form-control:focus { outline: none; border-color: rgba(0,71,171,.8); background: rgba(255,255,255,.08); }
-    .form-control::placeholder { color: rgba(255,255,255,.4); }
-    .form-control option { background: var(--card); color: var(--text); }
+    .form-control:focus { outline: none; border-color: var(--brand-blue); background: #ffffff; box-shadow: 0 0 0 3px rgba(2,132,199,0.15); }
+    .form-control::placeholder { color: #94a3b8; }
 
-    .mapWrap{margin-top:32px}
-    .map{width:100%;height:380px;border:0;display:block}
+    /* INFOS CONTACT RAPIDE */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 25px;
+    }
+    .pill-modern {
+      background: var(--surface-light);
+      border: 1px solid var(--line-border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .pill-modern strong { display: block; font-size: 14px; color: var(--brand-navy); margin-bottom: 4px; }
+    .pill-modern span { display: block; color: var(--slate-sub); font-size: 13px; line-height: 1.4; }
 
-    footer{
-      color:var(--muted); font-size:14px; margin:32px 0 10px;
-      display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    /* ZONES & CARTE */
+    .areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .areaTag {
+      padding: 8px 16px; border-radius: 999px;
+      border: 1px solid var(--line-border); background: var(--surface-light);
+      color: var(--slate-body); font-size: 13.5px; font-weight: 600;
     }
 
-    .fade{transition:opacity .25s ease,transform .25s ease}
-    .fade.out{opacity:0;transform:translateY(2px)}
+    /* FAQ COMPACT CAROUSEL / BARRE DÉFILANTE */
+    .faq-header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .faq-nav-controls {
+      display: flex;
+      gap: 8px;
+    }
+    .faq-nav-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--line-border);
+      background: var(--surface-white);
+      color: var(--brand-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 800;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .faq-nav-btn:hover {
+      background: var(--brand-blue);
+      color: #ffffff;
+      border-color: var(--brand-blue);
+    }
+    .faq-slider {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 6px 4px 14px 4px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--brand-blue) var(--line-border);
+    }
+    .faq-slider::-webkit-scrollbar {
+      height: 6px;
+    }
+    .faq-slider::-webkit-scrollbar-track {
+      background: var(--surface-light);
+      border-radius: 10px;
+    }
+    .faq-slider::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+    .faq-slider::-webkit-scrollbar-thumb:hover {
+      background: var(--brand-blue);
+    }
+    .faqItem {
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+      padding: 16px 18px;
+      border: 1px solid var(--line-border);
+      border-radius: 14px;
+      background: #ffffff;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(15,23,42,0.03);
+    }
+    .faqItem:hover {
+      border-color: var(--brand-blue);
+      box-shadow: 0 8px 18px rgba(2,132,199,0.08);
+      transform: translateY(-2px);
+    }
+    .faqItem h3 {
+      margin: 0 0 8px;
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--brand-navy);
+      line-height: 1.35;
+    }
+    .faqItem p {
+      margin: 0;
+      color: var(--slate-sub);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    @media (max-width: 600px) {
+      .faqItem { flex: 0 0 85%; }
+    }
+
+    /* FOOTER */
+    footer {
+      color: var(--slate-sub); font-size: 13.5px; margin: 60px 0 25px;
+      padding-top: 25px; border-top: 1px solid var(--line-border);
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+
+    .fade { transition: opacity .2s ease, transform .2s ease; }
+    .fade.out { opacity: 0; transform: translateY(2px); }
+
+    @media (max-width: 960px) {
+      .hero-wrap { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .workflow-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .heroMain h2 { font-size: 32px; }
+    }
+    @media (max-width: 600px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .device-deck { grid-template-columns: repeat(2, 1fr); }
+      .topRight { flex-direction: column; align-items: flex-end; gap: 6px; }
+      .google-badge { display: none; }
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- BARRE D'ATELIER ET HORAIRES -->
+  <div class="top-status-bar">
+    <div class="status-badge">
+      <span class="live-dot"></span>
+      <span id="statusBarText">Atelier ouvert : <strong>8h00 à 20h00</strong> • 275 Rue Western</span>
+    </div>
+    <div class="status-links">
+      <a href="tel:+14502097144">📞 (450) 209-7144</a>
+      <a href="mailto:info@winlab.ca">info@winlab.ca</a>
+    </div>
+  </div>
+
   <div class="wrap">
+    <!-- HEADER -->
     <header>
-      <div class="brand">
-        <div class="logo-container" aria-hidden="true">
-          <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-              <defs>
-                  <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(70.7816,70.7816,-70.7816,70.7816,14.6092,14.6092)">
-                      <stop offset="0" style="stop-color:#0047ab;stop-opacity:1"/>
-                      <stop offset="1" style="stop-color:#00c853;stop-opacity:1"/>
-                  </linearGradient>
-              </defs>
-              <g transform="matrix(1,0,0,1,-1.33227e-15,-1.33227e-15)">
-                  <path d="M50,14.609L14.609,50L50,85.391L85.391,50L50,14.609ZM50,26.731L73.269,50L50,73.269L26.731,50L50,26.731Z" style="fill:url(#_Linear1);"/>
-              </g>
-          </svg>
+      <a href="https://www.winlab.ca/" class="brand">
+        <div class="brand-frame">
+          <img src="images/logo-winlab.jpg" alt="Winlab - Réparation de Cellulaires" onerror="this.src='logo.jpg'">
         </div>
-        <div>
-          <h1>Winlab - Waterloo QC</h1>
-          <p id="tagline" class="fade">Réparation Professionnelle de Cellulaires, Ordinateurs, Consoles | Expert iPhone</p>
+        <div class="brand-copy">
+          <h1>Atelier Winlab</h1>
+          <p id="tagline" class="fade">Laboratoire Électronique • Cellulaires • PC • Consoles</p>
         </div>
-      </div>
+      </a>
 
       <div class="topRight">
+        <div class="google-badge">
+          <span class="google-stars">★★★★★</span>
+          <small>5,0 • Avis Google</small>
+        </div>
+
         <div class="lang" aria-label="Sélecteur de langue">
           <button class="active" data-lang="fr" aria-label="Français" title="Français">
             <img src="images/Francais.webp" alt="Français">
@@ -359,77 +608,149 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="card heroMain">
-          <div class="kicker fade" id="kicker">📍 Waterloo, QC | Estrie | Service Rapide avec Garantie | Experts iPhone</div>
-          <h2 class="fade" id="headline">Réparation de Cellulaires à Waterloo, QC | iPhone, Samsung, Mac | Winlab</h2>
+      <!-- HERO PRINCIPAL (OPCIÓN 2: DONNEZ UNE SECONDE VIE SANS REDONDANCE) -->
+      <section class="hero-wrap">
+        <div class="heroMain">
+          <div class="hero-lead-badge fade" id="kicker">⚡ Diagnostic rapide • Composants certifiés • Garantie</div>
+          <h2 class="fade" id="headline">
+            Donnez une seconde vie
+            <span>à vos appareils essentiels</span>
+          </h2>
           <p class="fade" id="sub">
-            Votre cellulaire a un écran cassé ou une batterie défectueuse? Chez Winlab, nous offrons des réparations professionnelles et rapides à Waterloo, Québec. Techniciens certifiés, garantie sur toutes les réparations et diagnostic précis. Faites-nous confiance pour redonner vie à votre appareil!
+            Écrans, batteries ou micro-soudure sur carte mère : nous remettons vos cellulaires et ordinateurs à neuf avec des pièces de haute qualité (OEM et Soft OLED). Un service transparent, soigné et garanti.
           </p>
 
           <div class="ctaRow">
             <a class="btn primary fade" id="callBtn" href="tel:+14502097144">📞 Appeler Maintenant! (450) 209-7144</a>
             <button class="btn whatsapp fade" id="chatBtn" onclick="if(window.Tawk_API && Tawk_API.toggle){ Tawk_API.toggle(); }">💬 Chat en Direct</button>
-            <a class="btn fade" id="emailBtn" href="mailto:info@winlab.ca">✉️ Envoyer un Courriel</a>
+            <a class="btn outline fade" id="emailBtn" href="mailto:info@winlab.ca">✉️ Envoyer un Courriel</a>
+          </div>
+
+          <!-- SÉLECTION PAR CATÉGORIES -->
+          <div class="device-deck">
+            <a href="#services-title" class="device-tile">
+              <span class="device-ico">📱</span>
+              <span class="device-label">Téléphones</span>
+            </a>
+            <a href="#services-title" class="device-tile">
+              <span class="device-ico">📟</span>
+              <span class="device-label">Tablettes</span>
+            </a>
+            <a href="#services-title" class="device-tile">
+              <span class="device-ico">💻</span>
+              <span class="device-label">Ordinateurs</span>
+            </a>
+            <a href="#services-title" class="device-tile">
+              <span class="device-ico">🎮</span>
+              <span class="device-label">Consoles</span>
+            </a>
           </div>
         </div>
 
-        <aside class="card mini" aria-label="Informations de contact">
-          <div class="pill">
-            <strong class="fade" id="hoursTitle">Heures d'Ouverture Étendues</strong>
-            <span class="fade" id="hoursText">Tous les jours | 8:00 – 20:00 | Ouvert pour vous!</span>
+        <!-- FOTO REAL DEL TALLER WINLAB -->
+        <div class="hero-visual">
+          <img 
+            src="atelier.jpg" 
+            alt="Atelier de réparation électronique Winlab" 
+            onerror="this.src='749609078_122130982089104143_8684082060159100363_n.jpg'"
+            loading="lazy"
+          >
+          <div class="floating-guarantee-card">
+            <div class="guarantee-icon">🔬</div>
+            <div class="guarantee-text">
+              <strong>Atelier Spécialisé & Certifié</strong>
+              <small>Microscope de précision, outillage professionnel et service garanti.</small>
+            </div>
           </div>
-          <div class="pill">
-            <strong class="fade" id="addrTitle">Notre Emplacement</strong>
-            <span class="fade" id="addrText">275 Rue Western, Waterloo QC, J0E 2N0 | Visitez-nous!</span>
-          </div>
-          <div class="pill">
-            <strong class="fade" id="phoneTitle">Téléphone de Contact</strong>
-            <span class="fade" id="phoneText">+1 (450) 209-7144 | Nous sommes à votre écoute!</span>
-          </div>
-          <div class="pill">
-            <strong class="fade" id="serviceAreaTitle">Couverture Locale et Estrie</strong>
-            <span class="fade" id="serviceAreaText">Réparation à Waterloo QC et toute la région de l'Estrie</span>
-          </div>
-        </aside>
+        </div>
       </section>
 
+      <!-- COORDONNÉES ET CONTACT -->
+      <section class="contact-grid" aria-label="Informations de contact">
+        <div class="pill-modern">
+          <strong class="fade" id="hoursTitle">Heures d'Ouverture Étendues</strong>
+          <span class="fade" id="hoursText">Tous les jours | 8:00 – 20:00 | Ouvert pour vous!</span>
+        </div>
+        <div class="pill-modern">
+          <strong class="fade" id="addrTitle">Notre Emplacement</strong>
+          <span class="fade" id="addrText">275 Rue Western, QC, J0E 2N0 | Visitez-nous!</span>
+        </div>
+        <div class="pill-modern">
+          <strong class="fade" id="phoneTitle">Téléphone de Contact</strong>
+          <span class="fade" id="phoneText">+1 (450) 209-7144 | Nous sommes à votre écoute!</span>
+        </div>
+        <div class="pill-modern">
+          <strong class="fade" id="serviceAreaTitle">Couverture et Disponibilité</strong>
+          <span class="fade" id="serviceAreaText">Prise en charge rapide sur rendez-vous ou dépôt direct</span>
+        </div>
+      </section>
+
+      <!-- COMMENT ÇA MARCHE -->
+      <section class="workflow-section">
+        <div class="wrap">
+          <span class="workflow-tag">Prise en charge transparente</span>
+          <h2 class="workflow-title">Votre réparation en 3 étapes simples</h2>
+          <p class="workflow-desc">Un processus direct, rigoureux et sans mauvaise surprise</p>
+
+          <div class="workflow-grid">
+            <div class="workflow-card">
+              <div class="step-circle">1</div>
+              <h3>Évaluation & Diagnostic</h3>
+              <p>Indiquez-nous la marque, le modèle et les pannes constatées sur votre appareil.</p>
+            </div>
+            <div class="workflow-card">
+              <div class="step-circle">2</div>
+              <h3>Dépôt à l'atelier</h3>
+              <p>Convenez d'une plage horaire pour déposer l'appareil directement au laboratoire.</p>
+            </div>
+            <div class="workflow-card">
+              <div class="step-circle">3</div>
+              <h3>Restitution & Garantie</h3>
+              <p>Repartez avec votre appareil testé et votre facture officielle détaillée.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
       <section class="section" aria-labelledby="services-title">
-        <h2 class="sectionHead fade" id="services-title">Services Professionnels de Réparation à Waterloo, QC</h2>
+        <h2 class="sectionHead fade" id="services-title">Services Professionnels de Réparation</h2>
         <p class="sectionText fade" id="services-intro">
-          Chez Winlab, nous nous spécialisons dans la réparation d'une large gamme d'appareils électroniques avec précision et rapidité à Waterloo, QC, et dans les environs.
+          Chez Winlab, nous nous spécialisons dans la réparation d'une large gamme d'appareils électroniques avec précision et rapidité.
         </p>
 
         <div class="grid" aria-label="Services">
-          <article class="card svc">
+          <article class="card-modern svc">
             <h3 class="fade" id="s1t">📱 Réparation de Cellulaires</h3>
-            <p class="fade" id="s1d">Remplacement d'écran, batterie, port de charge, caméra, haut-parleur, diagnostic précis et problèmes de logiciel.</p>
+            <p class="fade" id="s1d">Remplacement d'écran Soft OLED/OEM, batterie, port de charge, caméra, haut-parleur, diagnostic précis et problèmes de logiciel.</p>
           </article>
 
-          <article class="card svc">
+          <article class="card-modern svc">
             <h3 class="fade" id="s2t">💻 Réparation d'Ordinateurs</h3>
-            <p class="fade" id="s2d">PC et Mac : problèmes de performance, batterie, écran, clavier, stockage, système d'exploitation, nettoyage et diagnostic complet.</p>
+            <p class="fade" id="s2d">PC et Mac : problèmes de performance, batterie, écran, clavier, stockage SSD, système d'exploitation, nettoyage et diagnostic complet.</p>
           </article>
 
-          <article class="card svc">
+          <article class="card-modern svc">
             <h3 class="fade" id="s3t">🎮 Réparation de Consoles</h3>
-            <p class="fade" id="s3d">PlayStation, Xbox et Nintendo : surchauffe, ports HDMI, ventilateurs, nettoyage et autres pannes techniques.</p>
+            <p class="fade" id="s3d">PlayStation, Xbox et Nintendo : surchauffe, ports HDMI (micro-soudure), ventilateurs, nettoyage et autres pannes techniques.</p>
           </article>
         </div>
       </section>
 
-      <section class="section card svc" aria-labelledby="why-title">
-        <h2 class="sectionHead fade" id="why-title">Pourquoi Choisir Winlab pour Réparer votre Cellulaire à Waterloo, QC?</h2>
+      <!-- POURQUOI CHOISIR WINLAB -->
+      <section class="section card-modern" aria-labelledby="why-title">
+        <h2 class="sectionHead fade" id="why-title">Pourquoi Choisir Winlab pour vos Réparations?</h2>
         <ul class="serviceList fade" id="why-list">
-          <li><strong>Techniciens Experts Certifiés :</strong> Des années d'expérience dans la réparation d'iPhone et de Samsung.</li>
+          <li><strong>Techniciens Experts Certifiés :</strong> Des années d'expérience dans la réparation avancée de cellulaires et ordinateurs.</li>
           <li><strong>Diagnostic Rapide et Précis :</strong> Nous identifions la panne rapidement pour vous offrir la meilleure solution.</li>
           <li><strong>Garantie sur les Réparations :</strong> Nous garantissons notre travail pour votre totale tranquillité d'esprit.</li>
-          <li><strong>Réparation Locale Fiable :</strong> Service de proximité et transparent à Waterloo, QC.</li>
-          <li><strong>Couverture Estrie :</strong> Nous servons les clients de Sherbrooke, Magog, Granby et toute la région.</li>
+          <li><strong>Composants de Haute Qualité :</strong> Sélection stricte d'écrans Soft OLED et pièces OEM pour préserver les performances.</li>
+          <li><strong>Service Transparent et Facturation Reconnue :</strong> Reçus complets avec taxes pour vos assurances ou déclarations.</li>
         </ul>
       </section>
-      
-      <section class="section card svc" aria-labelledby="quote-title">
+
+      <!-- DEMANDEZ UN DEVIS -->
+      <section class="section card-modern" aria-labelledby="quote-title">
         <h2 class="sectionHead fade" id="quote-title">Demandez un Devis Gratuit</h2>
         <form class="quote-form" action="https://formsubmit.co/info@winlab.ca" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_subject" value="Nouveau Devis Web - Winlab.ca">
@@ -445,10 +766,10 @@
               <option value="Console" class="fade" id="opt-console">Console de Jeux</option>
             </select>
           </div>
-          
+
           <div class="form-group">
             <label for="marca" class="fade" id="label-brand">Marque et Modèle</label>
-            <input type="text" id="marca" name="Marque_Modele" class="form-control" placeholder="Ex: iPhone 13, PS5, Dell Inspiron..." required>
+            <input type="text" id="marca" name="Marque_Modele" class="form-control" placeholder="Ex: iPhone 15 Pro, PS5, MacBook Pro..." required>
           </div>
 
           <div class="form-group">
@@ -463,108 +784,97 @@
 
           <div class="form-group">
             <label for="archivo" class="fade" id="label-file">Joindre une photo (Optionnel)</label>
-            <input type="file" id="archivo" name="Photo_Appareil" class="form-control" accept="image/*, .pdf" style="background: rgba(255,255,255,.02); border: 1px dashed var(--border);">
-            <small class="fade" id="sub-file" style="color: var(--muted); font-size: 12px; margin-top: 4px;">Formats acceptés : JPG, PNG ou PDF</small>
+            <input type="file" id="archivo" name="Photo_Appareil" class="form-control" accept="image/*, .pdf" style="border: 1px dashed var(--line-border);">
+            <small class="fade" id="sub-file" style="color: var(--slate-sub); font-size: 12px; margin-top: 4px;">Formats acceptés : JPG, PNG ou PDF</small>
           </div>
-          
-          <button type="submit" class="btn primary fade" id="btn-submit" style="width:100%; justify-content:center; margin-top:10px;">
+
+          <button type="submit" class="btn primary fade" id="btn-submit" style="width:100%; margin-top:10px;">
             Envoyer la Demande
           </button>
         </form>
       </section>
 
-      <section class="section card svc" aria-labelledby="areas-title" style="margin-top: 32px;">
-        <h2 class="sectionHead fade" id="areas-title">Zones Desservies à Waterloo, QC et en Estrie</h2>
-        <p class="sectionText fade" id="areas-text">
-          Nous accueillons les clients de Waterloo et de plusieurs communautés en Estrie. Visitez-nous pour un service technique professionnel et rapide!
-        </p>
-        <div class="areas">
-          <span class="areaTag">Waterloo QC</span>
-          <span class="areaTag">Sherbrooke</span>
-          <span class="areaTag">Magog</span>
-          <span class="areaTag">Granby</span>
-          <span class="areaTag">Cowansville</span>
-          <span class="areaTag">Réparation Estrie</span>
+      <!-- FOIRE AUX QUESTIONS (CARROUSEL COMPACT & DÉFILANT) -->
+      <section class="section" aria-labelledby="faq-title" style="margin: 35px 0;">
+        <div class="faq-header-wrap">
+          <div>
+            <h2 class="sectionHead fade" id="faq-title" style="margin-bottom: 2px; font-size: 24px;">Foire Aux Questions</h2>
+            <p style="font-size: 13px; color: var(--slate-sub); margin: 0;">Faites glisser pour consulter les réponses rapides</p>
+          </div>
+          <div class="faq-nav-controls">
+            <button class="faq-nav-btn" onclick="defilarFAQ(-1)" aria-label="Précédent">‹</button>
+            <button class="faq-nav-btn" onclick="defilarFAQ(1)" aria-label="Suivant">›</button>
+          </div>
         </div>
-      </section>
 
-      <section class="section" aria-labelledby="faq-title">
-        <h2 class="sectionHead fade" id="faq-title">Foire Aux Questions sur la Réparation de Cellulaires à Waterloo, QC</h2>
-        <div class="faq">
+        <div class="faq-slider" id="faqSlider">
           <article class="faqItem">
-            <h3 class="fade" id="f1q">Réparez-vous les iPhone et Samsung à Waterloo, QC?</h3>
-            <p class="fade" id="f1a">Oui, chez Winlab, nous sommes experts dans la réparation d'une large gamme de modèles de cellulaires, y compris iPhone, Samsung et autres appareils Android compatibles.</p>
+            <h3 class="fade" id="f1q">Réparez-vous les iPhone et Samsung récents?</h3>
+            <p class="fade" id="f1a">Oui, chez Winlab, nous sommes experts dans la réparation d'une large gamme de modèles, y compris les dernières générations d'iPhone, Samsung et autres appareils compatibles.</p>
           </article>
 
           <article class="faqItem">
-            <h3 class="fade" id="f2q">Combien de temps prend la réparation d'un cellulaire à Waterloo, QC?</h3>
-            <p class="fade" id="f2a">Le temps de réparation varie selon la panne, mais chez Winlab, nous nous efforçons d'offrir des diagnostics rapides et des réparations efficaces pour minimiser votre temps d'attente.</p>
+            <h3 class="fade" id="f2q">Combien de temps prend une réparation?</h3>
+            <p class="fade" id="f2a">La majorité des remplacements d'écrans et de batteries s'effectuent en moins d'une heure. Les réparations par micro-soudure sont traitées sous 24h à 48h selon la panne.</p>
           </article>
 
           <article class="faqItem">
-            <h3 class="fade" id="f3q">Offrez-vous une garantie sur les réparations de cellulaires à Waterloo, QC?</h3>
-            <p class="fade" id="f3a">Oui, toutes nos réparations de cellulaires chez Winlab incluent une garantie pour votre tranquillité d'esprit et votre confiance.</p>
+            <h3 class="fade" id="f3q">Offrez-vous une garantie sur vos travaux?</h3>
+            <p class="fade" id="f3a">Oui, toutes nos réparations chez Winlab incluent une garantie écrite pour votre entière tranquillité d'esprit.</p>
           </article>
 
           <article class="faqItem">
-            <h3 class="fade" id="f4q">Ai-je besoin d'un rendez-vous pour réparer mon cellulaire à Waterloo, QC?</h3>
-            <p class="fade" id="f4a">Non, vous pouvez nous visiter directement à notre boutique à Waterloo, QC, ou nous contacter par téléphone ou via notre chat pour un meilleur service.</p>
+            <h3 class="fade" id="f4q">Faut-il obligatoirement prendre rendez-vous?</h3>
+            <p class="fade" id="f4a">Le rendez-vous préalable par appel, texte ou chat est fortement recommandé pour vous assurer de la disponibilité immédiate de la pièce et minimiser votre temps d'attente.</p>
           </article>
         </div>
-      </section>
-
-      <section class="card mapWrap" aria-label="Carte">
-        <iframe
-          class="map"
-          title="Emplacement de Winlab à Waterloo QC | Google Maps"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=275%20Rue%20Western,%20Waterloo,%20QC%20J0E%202N0&t=&z=15&ie=UTF8&iwloc=&output=embed">
-        </iframe>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      <div>© <span id="year"></span> Winlab Cellphone Repair • winlab.ca • Tous droits réservés</div>
-      <div class="fade" id="foot">Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144</div>
+      <div>© <span id="year"></span> Atelier Winlab • winlab.ca • Tous droits réservés</div>
+      <div class="fade" id="foot">Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144</div>
     </footer>
   </div>
 
+  <!-- SCRIPT MULTILINGUE SYNCHRONISÉ AVEC L'OPTION 2 -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const t = {
       fr: {
-        pageTitle: "Winlab | Réparation Professionnelle de Cellulaires à Waterloo, QC | iPhone, Samsung, Mac",
-        metaDescription: "Écran cassé? Batterie déchargée? Winlab offre une réparation professionnelle de cellulaires à Waterloo, Québec. Techniciens experts pour iPhone, Samsung et plus. Diagnostic rapide, garantie sur les réparations et service fiable. Visitez-nous ou appelez dès aujourd'hui!",
-        tagline: "Réparation Professionnelle de Cellulaires, Ordinateurs, Consoles | Expert iPhone",
-        kicker: "📍 Waterloo, QC | Estrie | Service Rapide avec Garantie | Experts iPhone",
-        headline: "Réparation de Cellulaires à Waterloo, QC | iPhone, Samsung, Mac | Winlab",
-        sub: "Votre cellulaire a un écran cassé ou une batterie défectueuse? Chez Winlab, nous offrons des réparations professionnelles et rapides à Waterloo, Québec. Techniciens certifiés, garantie sur toutes les réparations et diagnostic précis. Faites-nous confiance pour redonner vie à votre appareil!",
+        pageTitle: "Winlab | Réparation Professionnelle de Cellulaires, Ordinateurs & Consoles",
+        metaDescription: "Écran cassé? Batterie déchargée? Winlab offre une réparation professionnelle et soignée. Spécialiste iPhone, Samsung, Mac et micro-soudure. Diagnostic rapide et travail garanti!",
+        tagline: "Laboratoire Électronique • Cellulaires • PC • Consoles",
+        kicker: "⚡ Diagnostic rapide • Composants certifiés • Garantie",
+        headline: "Donnez une seconde vie",
+        headlineSpan: "à vos appareils essentiels",
+        sub: "Écrans, batteries ou micro-soudure sur carte mère : nous remettons vos cellulaires et ordinateurs à neuf avec des pièces de haute qualité (OEM et Soft OLED). Un service transparent, soigné et garanti.",
         call: "📞 Appeler Maintenant! (450) 209-7144",
         chatText: "💬 Chat en Direct",
         email: "✉️ Envoyer un Courriel",
         hoursTitle: "Heures d'Ouverture Étendues",
         hoursText: "Tous les jours | 8:00 – 20:00 | Ouvert pour vous!",
         addrTitle: "Notre Emplacement",
-        addrText: "275 Rue Western, Waterloo QC, J0E 2N0 | Visitez-nous!",
+        addrText: "275 Rue Western, QC, J0E 2N0 | Visitez-nous!",
         phoneTitle: "Téléphone de Contact",
         phoneText: "+1 (450) 209-7144 | Nous sommes à votre écoute!",
-        serviceAreaTitle: "Couverture Locale et Estrie",
-        serviceAreaText: "Réparation à Waterloo QC et toute la région de l'Estrie",
-        servicesIntro: "Chez Winlab, nous nous spécialisons dans la réparation d'une large gamme d'appareils électroniques avec précision et rapidité à Waterloo, QC, et dans les environs.",
+        serviceAreaTitle: "Couverture et Disponibilité",
+        serviceAreaText: "Prise en charge rapide sur rendez-vous ou dépôt direct",
+        servicesIntro: "Chez Winlab, nous nous spécialisons dans la réparation d'une large gamme d'appareils électroniques avec précision et rapidité.",
         s1t: "📱 Réparation de Cellulaires",
-        s1d: "Remplacement d'écran, batterie, port de charge, caméra, haut-parleur, diagnostic précis et problèmes de logiciel.",
+        s1d: "Remplacement d'écran Soft OLED/OEM, batterie, port de charge, caméra, haut-parleur, diagnostic précis et problèmes de logiciel.",
         s2t: "💻 Réparation d'Ordinateurs",
-        s2d: "PC et Mac : problèmes de performance, batterie, écran, clavier, stockage, système d'exploitation, nettoyage et diagnostic complet.",
+        s2d: "PC et Mac : problèmes de performance, batterie, écran, clavier, stockage SSD, système d'exploitation, nettoyage et diagnostic complet.",
         s3t: "🎮 Réparation de Consoles",
-        s3d: "PlayStation, Xbox et Nintendo : surchauffe, ports HDMI, ventilateurs, nettoyage et autres pannes techniques.",
+        s3d: "PlayStation, Xbox et Nintendo : surchauffe, ports HDMI (micro-soudure), ventilateurs, nettoyage et autres pannes techniques.",
         whyList: [
-          "<strong>Techniciens Experts Certifiés :</strong> Des années d'expérience dans la réparation d'iPhone et de Samsung.",
+          "<strong>Techniciens Experts Certifiés :</strong> Des années d'expérience dans la réparation avancée de cellulaires et ordinateurs.",
           "<strong>Diagnostic Rapide et Précis :</strong> Nous identifions la panne rapidement pour vous offrir la meilleure solution.",
           "<strong>Garantie sur les Réparations :</strong> Nous garantissons notre travail pour votre totale tranquillité d'esprit.",
-          "<strong>Réparation Locale Fiable :</strong> Service de proximité et transparent à Waterloo, QC.",
-          "<strong>Couverture Estrie :</strong> Nous servons les clients de Sherbrooke, Magog, Granby et toute la région."
+          "<strong>Composants de Haute Qualité :</strong> Sélection stricte d'écrans Soft OLED et pièces OEM pour préserver les performances.",
+          "<strong>Service Transparent et Facturation Reconnue :</strong> Reçus complets avec taxes pour vos assurances ou déclarations."
         ],
         quoteTitle: "Demandez un Devis Gratuit",
         labelDevice: "Type d'appareil",
@@ -573,7 +883,7 @@
         optPc: "Ordinateur (Portable / Bureau)",
         optConsole: "Console de Jeux",
         labelBrand: "Marque et Modèle",
-        placeholderBrand: "Ex: iPhone 13, PS5, Dell Inspiron...",
+        placeholderBrand: "Ex: iPhone 15 Pro, PS5, MacBook Pro...",
         labelEmail: "Votre Courriel (Email)",
         placeholderEmail: "client@email.com",
         labelIssue: "Description du problème",
@@ -581,50 +891,49 @@
         labelFile: "Joindre une photo (Optionnel)",
         subFile: "Formats acceptés : JPG, PNG ou PDF",
         btnSubmit: "Envoyer la Demande",
-        areasTitle: "Zones Desservies à Waterloo, QC et en Estrie",
-        areasText: "Nous accueillons les clients de Waterloo et de plusieurs communautés en Estrie. Visitez-nous pour un service technique professionnel et rapide!",
-        faqTitle: "Foire Aux Questions sur la Réparation de Cellulaires à Waterloo, QC",
-        f1q: "Réparez-vous les iPhone et Samsung à Waterloo, QC?",
-        f1a: "Oui, chez Winlab, nous sommes experts dans la réparation d'une large gamme de modèles de cellulaires, y compris iPhone, Samsung et autres appareils Android compatibles.",
-        f2q: "Combien de temps prend la réparation d'un cellulaire à Waterloo, QC?",
-        f2a: "Le temps de réparation varie selon la panne, mais chez Winlab, nous nous efforçons d'offrir des diagnostics rapides et des réparations efficaces pour minimiser votre temps d'attente.",
-        f3q: "Offrez-vous une garantie sur les réparations de cellulaires à Waterloo, QC?",
-        f3a: "All nos réparations de cellulaires chez Winlab incluent une garantie pour votre tranquillité d'esprit et votre confiance.",
-        f4q: "Ai-je besoin d'un rendez-vous pour réparer mon cellulaire à Waterloo, QC?",
-        f4a: "Non, vous pouvez nous visiter directement à notre boutique à Waterloo, QC, ou nous contacter par téléphone ou via notre chat pour un meilleur service.",
-        foot: "Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144"
+        faqTitle: "Foire Aux Questions sur nos Réparations",
+        f1q: "Réparez-vous les iPhone et Samsung récents?",
+        f1a: "Oui, chez Winlab, nous sommes experts dans la réparation d'une large gamme de modèles, y compris les dernières générations d'iPhone, Samsung et autres appareils compatibles.",
+        f2q: "Combien de temps prend une réparation?",
+        f2a: "La majorité des remplacements d'écrans et de batteries s'effectuent en moins d'une heure. Les réparations par micro-soudure sont traitées sous 24h à 48h selon la panne.",
+        f3q: "Offrez-vous une garantie sur vos travaux?",
+        f3a: "Oui, toutes nos réparations chez Winlab incluent une garantie écrite pour votre entière tranquillité d'esprit.",
+        f4q: "Faut-il obligatoirement prendre rendez-vous?",
+        f4a: "Le rendez-vous préalable par appel, texte ou chat est fortement recommandé pour vous assurer de la disponibilité immédiate de la pièce et minimiser votre temps d'attente.",
+        foot: "Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144"
       },
       es: {
-        pageTitle: "Winlab | Reparación Profesional de Celulares en Waterloo, QC | iPhone, Samsung, Mac",
-        metaDescription: "¿Pantalla rota? ¿Batería descargada? Winlab ofrece reparación profesional de celulares en Waterloo, Quebec. Técnicos expertos para iPhone, Samsung y más. Diagnóstico rápido, garantía y servicio confiable. ¡Visítanos o llámanos hoy!",
-        tagline: "Reparación Profesional de Celulares, Computadoras, Consolas | Experto iPhone",
-        kicker: "📍 Waterloo, QC | Estrie | Servicio Rápido con Garantía | Expertos iPhone",
-        headline: "Reparación de Celulares en Waterloo, QC | iPhone, Samsung, Mac | Winlab",
-        sub: "¿Tu celular tiene la pantalla rota o una batería defectuosa? En Winlab ofrecemos reparaciones profesionales y rápidas en Waterloo, Quebec. Técnicos certificados, garantía en todas las reparaciones y diagnóstico preciso. ¡Confía en nosotros para revivir tu dispositivo!",
+        pageTitle: "Winlab | Reparación Profesional de Celulares, Computadoras y Consolas",
+        metaDescription: "¿Pantalla rota? ¿Batería descargada? Winlab ofrece reparación profesional y cuidada. Especialista en iPhone, Samsung, Mac y micro-soldadura. ¡Diagnóstico rápido y garantía!",
+        tagline: "Laboratorio Electrónico • Celulares • PC • Consolas",
+        kicker: "⚡ Diagnóstico rápido • Componentes certificados • Garantía",
+        headline: "Dale una segunda vida",
+        headlineSpan: "a tus dispositivos esenciales",
+        sub: "Pantallas, baterías o micro-soldadura en tarjeta madre: dejamos tus celulares y computadoras como nuevos con componentes de alta calidad (OEM y Soft OLED). Servicio transparente, riguroso y garantizado.",
         call: "📞 ¡Llamar Ahora! (450) 209-7144",
         chatText: "💬 Chat en Directo",
         email: "✉️ Enviar un Correo",
         hoursTitle: "Horario de Atención Extendida",
         hoursText: "Todos los días | 8:00 – 20:00 | ¡Abierto para ti!",
         addrTitle: "Nuestra Ubicación",
-        addrText: "275 Rue Western, Waterloo QC, J0E 2N0 | ¡Visítanos!",
+        addrText: "275 Rue Western, QC, J0E 2N0 | ¡Visítanos!",
         phoneTitle: "Teléfono de Contacto",
         phoneText: "+1 (450) 209-7144 | ¡Estamos para escucharte!",
-        serviceAreaTitle: "Cobertura Local y Estrie",
-        serviceAreaText: "Reparación en Waterloo QC y toda la región de Estrie",
-        servicesIntro: "En Winlab nos especializamos en la reparación de una amplia gama de dispositivos electrónicos con precisión y rapidez en Waterloo, QC, y sus alrededores.",
+        serviceAreaTitle: "Cobertura y Disponibilidad",
+        serviceAreaText: "Atención rápida previa cita o depósito directo en taller",
+        servicesIntro: "En Winlab nos especializamos en la reparación de una amplia gama de dispositivos electrónicos con precisión y rapidez.",
         s1t: "📱 Reparación de Celulares",
-        s1d: "Cambio de pantalla, batería, puerto de carga, cámara, altavoz, diagnóstico preciso y problemas de software.",
+        s1d: "Cambio de pantalla Soft OLED/OEM, batería, puerto de carga, cámara, altavoz, diagnóstico preciso y problemas de software.",
         s2t: "💻 Reparación de Computadoras",
-        s2d: "PC y Mac: problemas de rendimiento, batería, pantalla, teclado, almacenamiento, sistema operativo, limpieza y diagnóstico completo.",
+        s2d: "PC y Mac: problemas de rendimiento, batería, pantalla, teclado, almacenamiento SSD, sistema operativo, limpieza y diagnóstico completo.",
         s3t: "🎮 Reparación de Consolas",
-        s3d: "PlayStation, Xbox y Nintendo: sobrecalentamiento, puertos HDMI, ventiladores, limpieza y otras fallas técnicas.",
+        s3d: "PlayStation, Xbox y Nintendo: sobrecalentamiento, puertos HDMI (micro-soldadura), ventiladores, limpieza y otras fallas técnicas.",
         whyList: [
-          "<strong>Técnicos Expertos Certificados:</strong> Años de experiencia en la reparación de iPhone y Samsung.",
-          "<strong>Diagnóstico Rápido y Preciso:</strong> Identificamos la falla rápidamente para ofrecerte la mejor solución.",
-          "<strong>Garantía en Reparaciones:</strong> Respaldamos nuestro trabajo para tu total tranquilidad.",
-          "<strong>Reparación Local Confiable:</strong> Servicio cercano y transparente en Waterloo, QC.",
-          "<strong>Cobertura Estrie:</strong> Atendemos a clientes de Sherbrooke, Magog, Granby y toda la región."
+          "<strong>Técnicos Expertos Certificados:</strong> Años de experiencia en reparación avanzada de celulares y ordenadores.",
+          "<strong>Diagnóstico Rápido y Preciso:</strong> Identificamos la falla con rapidez para darte la solución más conveniente.",
+          "<strong>Garantía en Reparaciones:</strong> Respaldamos cada uno de nuestros trabajos por escrito.",
+          "<strong>Componentes de Alta Calidad:</strong> Selección rigurosa de pantallas Soft OLED y piezas originales OEM.",
+          "<strong>Facturación Formal y Transparente:</strong> Recibos con impuestos válidos para seguros o registros contables."
         ],
         quoteTitle: "Solicita un Presupuesto Gratuito",
         labelDevice: "Tipo de dispositivo",
@@ -633,7 +942,7 @@
         optPc: "Computadora (Portátil / Escritorio)",
         optConsole: "Consola de Videojuegos",
         labelBrand: "Marca y Modelo",
-        placeholderBrand: "Ej: iPhone 13, PS5, Dell Inspiron...",
+        placeholderBrand: "Ej: iPhone 15 Pro, PS5, MacBook Pro...",
         labelEmail: "Tu Correo Electrónico (Email)",
         placeholderEmail: "cliente@email.com",
         labelIssue: "Descripción del problema",
@@ -641,50 +950,49 @@
         labelFile: "Adjuntar una foto (Opcional)",
         subFile: "Formatos aceptados: JPG, PNG o PDF",
         btnSubmit: "Enviar Solicitud",
-        areasTitle: "Zonas Atendidas en Waterloo, QC y Estrie",
-        areasText: "Recibimos clientes de Waterloo y de varias comunidades de Estrie. ¡Visítanos para un servicio técnico profesional y rápido!",
-        faqTitle: "Preguntas Frecuentes sobre Reparación de Celulares en Waterloo, QC",
-        f1q: "¿Reparan iPhone y Samsung en Waterloo, QC?",
-        f1a: "Sí, en Winlab somos expertos en la reparación de una amplia gama de modelos de celulares, incluidos iPhone, Samsung y otros dispositivos Android compatibles.",
-        f2q: "¿Cuánto tiempo toma reparar un celular en Waterloo, QC?",
-        f2a: "El tiempo de reparación varía según la falla, pero en Winlab nos esforzamos por ofrecer diagnósticos rápidos y reparaciones eficientes para minimizar tu tiempo de espera.",
-        f3q: "¿Ofrecen garantía en las reparaciones de celulares en Waterloo, QC?",
-        f3a: "Sí, todas nuestras reparaciones de celulares en Winlab incluyen garantía para tu tranquilidad y confianza.",
-        f4q: "¿Necesito una cita para reparar mi celular en Waterloo, QC?",
-        f4a: "No, puedes visitarnos directamente en nuestra tienda en Waterloo, QC, o contactarnos por teléfono o a través de nuestro chat para un mejor servicio.",
-        foot: "Abierto todos los días | 8:00–20:00 | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144"
+        faqTitle: "Preguntas Frecuentes sobre Reparaciones",
+        f1q: "¿Reparan iPhone y Samsung recientes?",
+        f1a: "Sí, en Winlab somos expertos en la reparación de celulares de última generación, tanto Apple como Samsung y otras marcas compatibles.",
+        f2q: "¿Cuánto tiempo toma una reparación?",
+        f2a: "La mayoría de cambios de pantalla o batería toman menos de una hora. Reparaciones de micro-soldadura toman entre 24h y 48h.",
+        f3q: "¿Ofrecen garantía por el trabajo?",
+        f3a: "Sí, todas las reparaciones en Winlab incluyen garantía escrita para tu entera tranquilidad.",
+        f4q: "¿Es necesario agendar cita?",
+        f4a: "Se recomienda avisar antes por llamada, mensaje o chat para asegurar la pieza en stock y atenderte sin esperas.",
+        foot: "Abierto todos los días | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144"
       },
       en: {
-        pageTitle: "Winlab | Professional Cell Phone Repair in Waterloo, QC | iPhone, Samsung, Mac",
-        metaDescription: "Broken screen? Drained battery? Winlab offers professional cell phone repair in Waterloo, Quebec. Expert technicians for iPhone, Samsung, and more. Fast diagnostic, warranty on repairs, and reliable service. Visit us or call today!",
-        tagline: "Professional Repair for Cell Phones, Computers, Consoles | iPhone Expert",
-        kicker: "📍 Waterloo, QC | Estrie | Fast Service with Warranty | iPhone Experts",
-        headline: "Cell Phone Repair in Waterloo, QC | iPhone, Samsung, Mac | Winlab",
-        sub: "Is your cell phone screen broken or battery failing? At Winlab, we offer professional and fast repairs in Waterloo, Quebec. Certified technicians, warranty on all repairs, and accurate diagnostics. Trust us to bring your device back to life!",
+        pageTitle: "Winlab | Professional Cell Phone, Computer & Console Repair",
+        metaDescription: "Broken screen? Drained battery? Winlab offers precision electronics repair. Expert technicians, OEM/Soft OLED parts, and warranty.",
+        tagline: "Electronics Laboratory • Phones • PC • Consoles",
+        kicker: "⚡ Fast Diagnostics • Certified Components • Warranty",
+        headline: "Give a second life",
+        headlineSpan: "to your essential devices",
+        sub: "Screens, batteries, or motherboard micro-soldering: we restore your phones and computers using high-grade OEM and Soft OLED parts. Clear, reliable, and guaranteed service.",
         call: "📞 Call Now! (450) 209-7144",
         chatText: "💬 Live Chat",
         email: "✉️ Send an Email",
         hoursTitle: "Extended Opening Hours",
         hoursText: "Everyday | 8:00 AM – 8:00 PM | Open for you!",
         addrTitle: "Our Location",
-        addrText: "275 Rue Western, Waterloo QC, J0E 2N0 | Visit Us!",
+        addrText: "275 Rue Western, QC, J0E 2N0 | Visit Us!",
         phoneTitle: "Contact Phone",
         phoneText: "+1 (450) 209-7144 | We're here to help!",
-        serviceAreaTitle: "Local & Estrie Coverage",
-        serviceAreaText: "Repair services in Waterloo QC and the entire Estrie region",
-        servicesIntro: "At Winlab, we specialize in repairing a wide range of electronic devices with precision and speed in Waterloo, QC, and surrounding areas.",
+        serviceAreaTitle: "Coverage & Availability",
+        serviceAreaText: "Fast turnaround with appointment or direct drop-off",
+        servicesIntro: "At Winlab, we specialize in precision electronics repair for smartphones, computers, and consoles.",
         s1t: "📱 Cell Phone Repair",
-        s1d: "Screen replacement, battery, charging port, camera, speaker, accurate diagnostics, and software troubleshooting.",
+        s1d: "Soft OLED/OEM screen replacement, battery, charging port, camera, speaker, accurate diagnostics, and software troubleshooting.",
         s2t: "💻 Computer Repair",
-        s2d: "PC & Mac: performance issues, battery, screen, keyboard, storage, operating system, cleaning, and full diagnostics.",
+        s2d: "PC & Mac: performance issues, battery, screen, keyboard, SSD storage upgrades, OS repair, and deep cleaning.",
         s3t: "🎮 Console Repair",
-        s3d: "PlayStation, Xbox, and Nintendo: overheating, HDMI ports, fans, cleaning, and other technical issues.",
+        s3d: "PlayStation, Xbox, and Nintendo: overheating, HDMI micro-soldering, noisy fans, cleaning, and technical troubleshooting.",
         whyList: [
-          "<strong>Certified Expert Technicians:</strong> Years of experience repairing iPhones and Samsung devices.",
-          "<strong>Fast & Accurate Diagnostic:</strong> We identify the issue quickly to offer you the best solution.",
-          "<strong>Warranty on Repairs:</strong> We stand by our work for your complete peace of mind.",
-          "<strong>Reliable Local Repair:</strong> Close and transparent service in Waterloo, QC.",
-          "<strong>Estrie Coverage:</strong> We serve clients from Sherbrooke, Magog, Granby, and the entire region."
+          "<strong>Certified Expert Technicians:</strong> Years of advanced bench experience in micro-soldering and device restoration.",
+          "<strong>Fast & Accurate Diagnostics:</strong> Prompt detection of the root issue to provide the best repair path.",
+          "<strong>Warranty on All Repairs:</strong> Written guarantee on both parts and labor for your peace of mind.",
+          "<strong>Premium Quality Components:</strong> Dedicated use of Soft OLED and OEM screens for original touch and brightness.",
+          "<strong>Official Business Invoicing:</strong> Compliant receipts with taxes suitable for business or insurance claims."
         ],
         quoteTitle: "Request a Free Quote",
         labelDevice: "Device Type",
@@ -693,7 +1001,7 @@
         optPc: "Computer (Laptop / Desktop)",
         optConsole: "Gaming Console",
         labelBrand: "Brand and Model",
-        placeholderBrand: "Ex: iPhone 13, PS5, Dell Inspiron...",
+        placeholderBrand: "Ex: iPhone 15 Pro, PS5, MacBook Pro...",
         labelEmail: "Your Email",
         placeholderEmail: "client@email.com",
         labelIssue: "Problem Description",
@@ -701,30 +1009,35 @@
         labelFile: "Attach a Photo (Optional)",
         subFile: "Accepted formats: JPG, PNG or PDF",
         btnSubmit: "Submit Request",
-        areasTitle: "Service Areas in Waterloo, QC & Estrie",
-        areasText: "We welcome clients from Waterloo and multiple communities across Estrie. Visit us for professional and fast technical service!",
-        faqTitle: "Frequently Asked Questions About Cell Phone Repair in Waterloo, QC",
-        f1q: "Do you repair iPhones and Samsung phones in Waterloo, QC?",
-        f1a: "Yes, at Winlab we are experts in repairing a wide range of cell phone models, including iPhone, Samsung, and other compatible Android devices.",
-        f2q: "How long does a cell phone repair take in Waterloo, QC?",
-        f2a: "Repair time varies depending on the issue, but at Winlab we strive to provide quick diagnostics and efficient repairs to minimize your wait time.",
-        f3q: "Do you offer a warranty on cell phone repairs in Waterloo, QC?",
-        f3a: "Yes, all our cell phone repairs at Winlab include a warranty for your peace of mind and confidence.",
-        f4q: "Do I need an appointment to repair my cell phone in Waterloo, QC?",
-        f4a: "No, you can visit us directly at our shop in Waterloo, QC, or contact us by phone or via our chat for better service.",
-        foot: "Open everyday | 8:00 AM–8:00 PM | 275 Rue Western, Waterloo QC J0E 2N0 | +1 (450) 209-7144"
+        faqTitle: "Frequently Asked Questions",
+        f1q: "Do you repair recent iPhone and Samsung models?",
+        f1a: "Yes, at Winlab we work on modern generations of smartphones with dedicated diagnostic and programming equipment.",
+        f2q: "How long does a repair take?",
+        f2a: "Most screen and battery replacements take under 60 minutes. Board-level micro-soldering typically requires 24h to 48h.",
+        f3q: "Do you provide a warranty on repairs?",
+        f3a: "Yes, all repairs carried out at Winlab are covered by our written warranty.",
+        f4q: "Do I need to book an appointment?",
+        f4a: "A quick heads-up via call or chat is recommended to ensure immediate part reservation and zero wait time.",
+        foot: "Open everyday | 8:00 AM–8:00 PM | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144"
       }
     };
 
+    function defilarFAQ(direccion) {
+      const slider = document.getElementById('faqSlider');
+      if (slider) {
+        slider.scrollBy({ left: direccion * 330, behavior: 'smooth' });
+      }
+    }
+
     function setLanguage(lang) {
-      document.querySelectorAll(".lang button").forEach(btn => {
+
+    document.querySelectorAll(".lang button").forEach(btn => {
         btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
       });
 
       const elements = {
         tagline: "tagline",
         kicker: "kicker",
-        headline: "headline",
         sub: "sub",
         callBtn: "call",
         chatBtn: "chatText",
@@ -757,8 +1070,6 @@
         "label-file": "labelFile",
         "sub-file": "subFile",
         "btn-submit": "btnSubmit",
-        "areas-title": "areasTitle",
-        "areas-text": "areasText",
         "faq-title": "faqTitle",
         f1q: "f1q",
         f1a: "f1a",
@@ -773,6 +1084,15 @@
 
       document.title = t[lang].pageTitle;
       document.querySelector('meta[name="description"]').setAttribute("content", t[lang].metaDescription);
+
+      const headlineEl = document.getElementById("headline");
+      if (headlineEl && t[lang].headline) {
+        headlineEl.classList.add("out");
+        setTimeout(() => {
+          headlineEl.innerHTML = `${t[lang].headline} <span>${t[lang].headlineSpan}</span>`;
+          headlineEl.classList.remove("out");
+        }, 150);
+      }
 
       for (const [id, key] of Object.entries(elements)) {
         if (!key) continue;
@@ -794,10 +1114,13 @@
           whyListEl.classList.remove("out");
         }, 150);
       }
+    }
 
-      const brandHeader = document.querySelector(".brand h1");
-      if (brandHeader) {
-        brandHeader.textContent = lang === "es" ? "Winlab - Waterloo QC" : lang === "en" ? "Winlab - Waterloo QC" : "Winlab - Waterloo QC";
+    
+    function defilarFAQ(direccion) {
+      const slider = document.getElementById('faqSlider');
+      if (slider) {
+        slider.scrollBy({ left: direccion * 330, behavior: 'smooth' });
       }
     }
 
@@ -809,7 +1132,7 @@
     });
   </script>
 
-  <!--Start of Tawk.to Script-->
+  <!-- Tawk.to Live Chat -->
   <script type="text/javascript">
   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
   (function(){
@@ -821,6 +1144,5 @@
   s0.parentNode.insertBefore(s1,s0);
   })();
   </script>
-  <!--End of Tawk.to Script-->
 </body>
 </html>
