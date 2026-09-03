@@ -24,7 +24,7 @@
   <meta property="og:locale" content="fr_CA" />
   <meta property="og:title" content="Winlab | Réparation de Cellulaires, PC & Consoles | Experts Certifiés" />
   <meta property="og:description" content="Service rapide et garanti de réparation d'appareils électroniques. Écrans Soft OLED/OEM, batteries, micro-soudure et ordinateurs." />
-  <meta property="og:image" content="https://www.winlab.ca/images/logo-winlab.jpg" />
+  <meta property="og:image" content="https://www.winlab.ca/images/logo.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Winlab | Réparation de Cellulaires, PC & Consoles" />
   <meta name="twitter:description" content="Service rapide de réparation d'appareils électroniques. Techniciens experts et garantie!" />
-  <meta name="twitter:image" content="https://www.winlab.ca/images/logo-winlab.jpg" />
+  <meta name="twitter:image" content="https://www.winlab.ca/images/logo.jpg" />
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -44,7 +44,7 @@
     "@type": "ElectronicsStore",
     "name": "Winlab - Réparation de Cellulaires",
     "url": "https://www.winlab.ca/",
-    "image": "https://www.winlab.ca/images/logo-winlab.jpg",
+    "image": "https://www.winlab.ca/images/logo.jpg",
     "telephone": "+1-450-209-7144",
     "email": "info@winlab.ca",
     "address": {
@@ -93,7 +93,7 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-y: scroll; }
     body { background-color: var(--surface-white); color: var(--slate-body); line-height: 1.6; }
     a { color: inherit; }
     img { max-width: 100%; display: block; }
@@ -123,7 +123,7 @@
       align-items: center;
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(10px);
       z-index: 1000;
       border-bottom: 1px solid var(--line-border);
@@ -137,7 +137,8 @@
       display: flex;
       align-items: center;
     }
-    .brand-frame img { height: 100%; width: auto; }
+    .brand-frame img { height: 100%; width: auto; object-fit: contain; }
+
     .brand-copy h1 { font-size: 20px; font-weight: 800; color: var(--brand-navy); line-height: 1.1; }
     .brand-copy p { font-size: 11.5px; color: var(--brand-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
@@ -420,7 +421,7 @@
     .pill-modern strong { display: block; font-size: 14px; color: var(--brand-navy); margin-bottom: 4px; }
     .pill-modern span { display: block; color: var(--slate-sub); font-size: 13px; line-height: 1.4; }
 
-    /* ZONES & CARTE */
+    /* ZONES */
     .areas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
     .areaTag {
       padding: 8px 16px; border-radius: 999px;
@@ -527,9 +528,6 @@
       display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     }
 
-    .fade { transition: opacity .2s ease, transform .2s ease; }
-    .fade.out { opacity: 0; transform: translateY(2px); }
-
     @media (max-width: 960px) {
       .hero-wrap { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
@@ -569,7 +567,7 @@
         </div>
         <div class="brand-copy">
           <h1>Atelier Winlab</h1>
-          <p id="tagline" class="fade">Laboratoire Électronique • Cellulaires • PC • Consoles</p>
+          <p id="tagline">Laboratoire Électronique • Cellulaires • PC • Consoles</p>
         </div>
       </a>
 
@@ -608,22 +606,22 @@
     </header>
 
     <main>
-      <!-- HERO PRINCIPAL (OPCIÓN 2: DONNEZ UNE SECONDE VIE SANS REDONDANCE) -->
+      <!-- HERO PRINCIPAL -->
       <section class="hero-wrap">
         <div class="heroMain">
-          <div class="hero-lead-badge fade" id="kicker">⚡ Diagnostic rapide • Composants certifiés • Garantie</div>
-          <h2 class="fade" id="headline">
+          <div class="hero-lead-badge" id="kicker">⚡ Diagnostic rapide • Composants certifiés • Garantie</div>
+          <h2 id="headline">
             Donnez une seconde vie
             <span>à vos appareils essentiels</span>
           </h2>
-          <p class="fade" id="sub">
+          <p id="sub">
             Écrans, batteries ou micro-soudure sur carte mère : nous remettons vos cellulaires et ordinateurs à neuf avec des pièces de haute qualité (OEM et Soft OLED). Un service transparent, soigné et garanti.
           </p>
 
           <div class="ctaRow">
-            <a class="btn primary fade" id="callBtn" href="tel:+14502097144">📞 Appeler Maintenant! (450) 209-7144</a>
-            <button class="btn whatsapp fade" id="chatBtn" onclick="if(window.Tawk_API && Tawk_API.toggle){ Tawk_API.toggle(); }">💬 Chat en Direct</button>
-            <a class="btn outline fade" id="emailBtn" href="mailto:info@winlab.ca">✉️ Envoyer un Courriel</a>
+            <a class="btn primary" id="callBtn" href="tel:+14502097144">📞 Appeler Maintenant! (450) 209-7144</a>
+            <button class="btn whatsapp" id="chatBtn" onclick="if(window.Tawk_API && Tawk_API.toggle){ Tawk_API.toggle(); }">💬 Chat en Direct</button>
+            <a class="btn outline" id="emailBtn" href="mailto:info@winlab.ca">✉️ Envoyer un Courriel</a>
           </div>
 
           <!-- SÉLECTION PAR CATÉGORIES -->
@@ -668,20 +666,20 @@
       <!-- COORDONNÉES ET CONTACT -->
       <section class="contact-grid" aria-label="Informations de contact">
         <div class="pill-modern">
-          <strong class="fade" id="hoursTitle">Heures d'Ouverture Étendues</strong>
-          <span class="fade" id="hoursText">Tous les jours | 8:00 – 20:00 | Ouvert pour vous!</span>
+          <strong id="hoursTitle">Heures d'Ouverture Étendues</strong>
+          <span id="hoursText">Tous les jours | 8:00 – 20:00 | Ouvert pour vous!</span>
         </div>
         <div class="pill-modern">
-          <strong class="fade" id="addrTitle">Notre Emplacement</strong>
-          <span class="fade" id="addrText">275 Rue Western, QC, J0E 2N0 | Visitez-nous!</span>
+          <strong id="addrTitle">Notre Emplacement</strong>
+          <span id="addrText">275 Rue Western, QC, J0E 2N0 | Visitez-nous!</span>
         </div>
         <div class="pill-modern">
-          <strong class="fade" id="phoneTitle">Téléphone de Contact</strong>
-          <span class="fade" id="phoneText">+1 (450) 209-7144 | Nous sommes à votre écoute!</span>
+          <strong id="phoneTitle">Téléphone de Contact</strong>
+          <span id="phoneText">+1 (450) 209-7144 | Nous sommes à votre écoute!</span>
         </div>
         <div class="pill-modern">
-          <strong class="fade" id="serviceAreaTitle">Couverture et Disponibilité</strong>
-          <span class="fade" id="serviceAreaText">Prise en charge rapide sur rendez-vous ou dépôt direct</span>
+          <strong id="serviceAreaTitle">Couverture et Disponibilité</strong>
+          <span id="serviceAreaText">Prise en charge rapide sur rendez-vous ou dépôt direct</span>
         </div>
       </section>
 
@@ -714,33 +712,33 @@
 
       <!-- SERVICES -->
       <section class="section" aria-labelledby="services-title">
-        <h2 class="sectionHead fade" id="services-title">Services Professionnels de Réparation</h2>
-        <p class="sectionText fade" id="services-intro">
+        <h2 class="sectionHead" id="services-title">Services Professionnels de Réparation</h2>
+        <p class="sectionText" id="services-intro">
           Chez Winlab, nous nous spécialisons dans la réparation d'une large gamme d'appareils électroniques avec précision et rapidité.
         </p>
 
         <div class="grid" aria-label="Services">
           <article class="card-modern svc">
-            <h3 class="fade" id="s1t">📱 Réparation de Cellulaires</h3>
-            <p class="fade" id="s1d">Remplacement d'écran Soft OLED/OEM, batterie, port de charge, caméra, haut-parleur, diagnostic précis et problèmes de logiciel.</p>
+            <h3 id="s1t">📱 Réparation de Cellulaires</h3>
+            <p id="s1d">Remplacement d'écran Soft OLED/OEM, batterie, port de charge, caméra, haut-parleur, diagnostic précis et problèmes de logiciel.</p>
           </article>
 
           <article class="card-modern svc">
-            <h3 class="fade" id="s2t">💻 Réparation d'Ordinateurs</h3>
-            <p class="fade" id="s2d">PC et Mac : problèmes de performance, batterie, écran, clavier, stockage SSD, système d'exploitation, nettoyage et diagnostic complet.</p>
+            <h3 id="s2t">💻 Réparation d'Ordinateurs</h3>
+            <p id="s2d">PC et Mac : problèmes de performance, batterie, écran, clavier, stockage SSD, système d'exploitation, nettoyage et diagnostic complet.</p>
           </article>
 
           <article class="card-modern svc">
-            <h3 class="fade" id="s3t">🎮 Réparation de Consoles</h3>
-            <p class="fade" id="s3d">PlayStation, Xbox et Nintendo : surchauffe, ports HDMI (micro-soudure), ventilateurs, nettoyage et autres pannes techniques.</p>
+            <h3 id="s3t">🎮 Réparation de Consoles</h3>
+            <p id="s3d">PlayStation, Xbox et Nintendo : surchauffe, ports HDMI (micro-soudure), ventilateurs, nettoyage et autres pannes techniques.</p>
           </article>
         </div>
       </section>
 
       <!-- POURQUOI CHOISIR WINLAB -->
       <section class="section card-modern" aria-labelledby="why-title">
-        <h2 class="sectionHead fade" id="why-title">Pourquoi Choisir Winlab pour vos Réparations?</h2>
-        <ul class="serviceList fade" id="why-list">
+        <h2 class="sectionHead" id="why-title">Pourquoi Choisir Winlab pour vos Réparations?</h2>
+        <ul class="serviceList" id="why-list">
           <li><strong>Techniciens Experts Certifiés :</strong> Des années d'expérience dans la réparation avancée de cellulaires et ordinateurs.</li>
           <li><strong>Diagnostic Rapide et Précis :</strong> Nous identifions la panne rapidement pour vous offrir la meilleure solution.</li>
           <li><strong>Garantie sur les Réparations :</strong> Nous garantissons notre travail pour votre totale tranquillité d'esprit.</li>
@@ -751,44 +749,44 @@
 
       <!-- DEMANDEZ UN DEVIS -->
       <section class="section card-modern" aria-labelledby="quote-title">
-        <h2 class="sectionHead fade" id="quote-title">Demandez un Devis Gratuit</h2>
+        <h2 class="sectionHead" id="quote-title">Demandez un Devis Gratuit</h2>
         <form class="quote-form" action="https://formsubmit.co/info@winlab.ca" method="POST" enctype="multipart/form-data">
           <input type="hidden" name="_subject" value="Nouveau Devis Web - Winlab.ca">
           <input type="hidden" name="_next" value="https://www.winlab.ca/">
           <input type="hidden" name="_captcha" value="false">
 
           <div class="form-group">
-            <label for="dispositivo" class="fade" id="label-device">Type d'appareil</label>
+            <label for="dispositivo" id="label-device">Type d'appareil</label>
             <select id="dispositivo" name="Type_Appareil" class="form-control" required>
-              <option value="" disabled selected class="fade" id="opt-select">Sélectionnez une option...</option>
-              <option value="Cellulaire" class="fade" id="opt-cell">Cellulaire / Smartphone</option>
-              <option value="Ordinateur" class="fade" id="opt-pc">Ordinateur (Portable / Bureau)</option>
-              <option value="Console" class="fade" id="opt-console">Console de Jeux</option>
+              <option value="" disabled selected id="opt-select">Sélectionnez une option...</option>
+              <option value="Cellulaire" id="opt-cell">Cellulaire / Smartphone</option>
+              <option value="Ordinateur" id="opt-pc">Ordinateur (Portable / Bureau)</option>
+              <option value="Console" id="opt-console">Console de Jeux</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label for="marca" class="fade" id="label-brand">Marque et Modèle</label>
+            <label for="marca" id="label-brand">Marque et Modèle</label>
             <input type="text" id="marca" name="Marque_Modele" class="form-control" placeholder="Ex: iPhone 15 Pro, PS5, MacBook Pro..." required>
           </div>
 
           <div class="form-group">
-            <label for="correo" class="fade" id="label-email">Votre Courriel (Email)</label>
+            <label for="correo" id="label-email">Votre Courriel (Email)</label>
             <input type="email" id="correo" name="Email_Client" class="form-control" placeholder="client@email.com" required>
           </div>
 
           <div class="form-group">
-            <label for="problema" class="fade" id="label-issue">Description du problème</label>
+            <label for="problema" id="label-issue">Description du problème</label>
             <textarea id="problema" name="Description_Probleme" class="form-control" rows="3" placeholder="Décrivez brièvement la panne..." required></textarea>
           </div>
 
           <div class="form-group">
-            <label for="archivo" class="fade" id="label-file">Joindre une photo (Optionnel)</label>
+            <label for="archivo" id="label-file">Joindre une photo (Optionnel)</label>
             <input type="file" id="archivo" name="Photo_Appareil" class="form-control" accept="image/*, .pdf" style="border: 1px dashed var(--line-border);">
-            <small class="fade" id="sub-file" style="color: var(--slate-sub); font-size: 12px; margin-top: 4px;">Formats acceptés : JPG, PNG ou PDF</small>
+            <small id="sub-file" style="color: var(--slate-sub); font-size: 12px; margin-top: 4px;">Formats acceptés : JPG, PNG ou PDF</small>
           </div>
 
-          <button type="submit" class="btn primary fade" id="btn-submit" style="width:100%; margin-top:10px;">
+          <button type="submit" class="btn primary" id="btn-submit" style="width:100%; margin-top:10px;">
             Envoyer la Demande
           </button>
         </form>
@@ -798,7 +796,7 @@
       <section class="section" aria-labelledby="faq-title" style="margin: 35px 0;">
         <div class="faq-header-wrap">
           <div>
-            <h2 class="sectionHead fade" id="faq-title" style="margin-bottom: 2px; font-size: 24px;">Foire Aux Questions</h2>
+            <h2 class="sectionHead" id="faq-title" style="margin-bottom: 2px; font-size: 24px;">Foire Aux Questions</h2>
             <p style="font-size: 13px; color: var(--slate-sub); margin: 0;">Faites glisser pour consulter les réponses rapides</p>
           </div>
           <div class="faq-nav-controls">
@@ -809,23 +807,23 @@
 
         <div class="faq-slider" id="faqSlider">
           <article class="faqItem">
-            <h3 class="fade" id="f1q">Réparez-vous les iPhone et Samsung récents?</h3>
-            <p class="fade" id="f1a">Oui, chez Winlab, nous sommes experts dans la réparation d'une large gamme de modèles, y compris les dernières générations d'iPhone, Samsung et autres appareils compatibles.</p>
+            <h3 id="f1q">Réparez-vous les iPhone et Samsung récents?</h3>
+            <p id="f1a">Oui, chez Winlab, nous sommes experts dans la réparation d'une large gamme de modèles, y compris les dernières générations d'iPhone, Samsung et autres appareils compatibles.</p>
           </article>
 
           <article class="faqItem">
-            <h3 class="fade" id="f2q">Combien de temps prend une réparation?</h3>
-            <p class="fade" id="f2a">La majorité des remplacements d'écrans et de batteries s'effectuent en moins d'une heure. Les réparations par micro-soudure sont traitées sous 24h à 48h selon la panne.</p>
+            <h3 id="f2q">Combien de temps prend une réparation?</h3>
+            <p id="f2a">La majorité des remplacements d'écrans et de batteries s'effectuent en moins d'une heure. Les réparations par micro-soudure sont traitées sous 24h à 48h selon la panne.</p>
           </article>
 
           <article class="faqItem">
-            <h3 class="fade" id="f3q">Offrez-vous une garantie sur vos travaux?</h3>
-            <p class="fade" id="f3a">Oui, toutes nos réparations chez Winlab incluent une garantie écrite pour votre entière tranquillité d'esprit.</p>
+            <h3 id="f3q">Offrez-vous une garantie sur vos travaux?</h3>
+            <p id="f3a">Oui, toutes nos réparations chez Winlab incluent une garantie écrite pour votre entière tranquillité d'esprit.</p>
           </article>
 
           <article class="faqItem">
-            <h3 class="fade" id="f4q">Faut-il obligatoirement prendre rendez-vous?</h3>
-            <p class="fade" id="f4a">Le rendez-vous préalable par appel, texte ou chat est fortement recommandé pour vous assurer de la disponibilité immédiate de la pièce et minimiser votre temps d'attente.</p>
+            <h3 id="f4q">Faut-il obligatoirement prendre rendez-vous?</h3>
+            <p id="f4a">Le rendez-vous préalable par appel, texte ou chat est fortement recommandé pour vous assurer de la disponibilité immédiate de la pièce et minimiser votre temps d'attente.</p>
           </article>
         </div>
       </section>
@@ -834,11 +832,11 @@
     <!-- FOOTER -->
     <footer>
       <div>© <span id="year"></span> Atelier Winlab • winlab.ca • Tous droits réservés</div>
-      <div class="fade" id="foot">Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144</div>
+      <div id="foot">Ouvert tous les jours | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144</div>
     </footer>
   </div>
 
-  <!-- SCRIPT MULTILINGUE SYNCHRONISÉ AVEC L'OPTION 2 -->
+  <!-- SCRIPT MULTILINGUE & STABILISATION -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -925,7 +923,7 @@
         s1t: "📱 Reparación de Celulares",
         s1d: "Cambio de pantalla Soft OLED/OEM, batería, puerto de carga, cámara, altavoz, diagnóstico preciso y problemas de software.",
         s2t: "💻 Reparación de Computadoras",
-        s2d: "PC y Mac: problemas de rendimiento, batería, pantalla, teclado, almacenamiento SSD, sistema operativo, limpieza y diagnóstico completo.",
+        s2d: "PC y Mac: problemas de rendimiento, batterie, pantalla, teclado, almacenamiento SSD, sistema operativo, limpieza y diagnóstico completo.",
         s3t: "🎮 Reparación de Consolas",
         s3d: "PlayStation, Xbox y Nintendo: sobrecalentamiento, puertos HDMI (micro-soldadura), ventiladores, limpieza y otras fallas técnicas.",
         whyList: [
@@ -933,7 +931,7 @@
           "<strong>Diagnóstico Rápido y Preciso:</strong> Identificamos la falla con rapidez para darte la solución más conveniente.",
           "<strong>Garantía en Reparaciones:</strong> Respaldamos cada uno de nuestros trabajos por escrito.",
           "<strong>Componentes de Alta Calidad:</strong> Selección rigurosa de pantallas Soft OLED y piezas originales OEM.",
-          "<strong>Facturación Formal y Transparente:</strong> Recibos con impuestos válidos para seguros o registros contables."
+          "<strong>Facturación Formal y Transparente:</strong> Recibos con impuestos válidos para seguros ou registros contables."
         ],
         quoteTitle: "Solicita un Presupuesto Gratuito",
         labelDevice: "Tipo de dispositivo",
@@ -948,9 +946,9 @@
         labelIssue: "Descripción del problema",
         placeholderIssue: "Describe brevemente la falla...",
         labelFile: "Adjuntar una foto (Opcional)",
-        subFile: "Formatos aceptados: JPG, PNG o PDF",
+        subFile: "Formatos aceptados: JPG, PNG ou PDF",
         btnSubmit: "Enviar Solicitud",
-        faqTitle: "Preguntas Frecuentes sobre Reparaciones",
+        faqTitle: "Preguntas Frecuentes sur nos Réparations",
         f1q: "¿Reparan iPhone y Samsung recientes?",
         f1a: "Sí, en Winlab somos expertos en la reparación de celulares de última generación, tanto Apple como Samsung y otras marcas compatibles.",
         f2q: "¿Cuánto tiempo toma una reparación?",
@@ -959,7 +957,7 @@
         f3a: "Sí, todas las reparaciones en Winlab incluyen garantía escrita para tu entera tranquilidad.",
         f4q: "¿Es necesario agendar cita?",
         f4a: "Se recomienda avisar antes por llamada, mensaje o chat para asegurar la pieza en stock y atenderte sin esperas.",
-        foot: "Abierto todos los días | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144"
+        foot: "Abierto todos les jours | 8:00–20:00 | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144"
       },
       en: {
         pageTitle: "Winlab | Professional Cell Phone, Computer & Console Repair",
@@ -997,7 +995,7 @@
         quoteTitle: "Request a Free Quote",
         labelDevice: "Device Type",
         optSelect: "Select an option...",
-        optCell: "Cell Phone / Smartphone",
+        optCell: "Cell Cellphone / Smartphone",
         optPc: "Computer (Laptop / Desktop)",
         optConsole: "Gaming Console",
         labelBrand: "Brand and Model",
@@ -1030,8 +1028,7 @@
     }
 
     function setLanguage(lang) {
-
-    document.querySelectorAll(".lang button").forEach(btn => {
+      document.querySelectorAll(".lang button").forEach(btn => {
         btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
       });
 
@@ -1050,14 +1047,13 @@
         phoneText: "phoneText",
         serviceAreaTitle: "serviceAreaTitle",
         serviceAreaText: "serviceAreaText",
-        "services-title": "servicesIntro".startsWith("s") ? null : "servicesIntro",
+        "services-title": "servicesIntro",
         s1t: "s1t",
         s1d: "s1d",
         s2t: "s2t",
         s2d: "s2d",
         s3t: "s3t",
         s3d: "s3d",
-        "why-title": null,
         quoteTitle: "quoteTitle",
         "label-device": "labelDevice",
         "opt-select": "optSelect",
@@ -1087,40 +1083,20 @@
 
       const headlineEl = document.getElementById("headline");
       if (headlineEl && t[lang].headline) {
-        headlineEl.classList.add("out");
-        setTimeout(() => {
-          headlineEl.innerHTML = `${t[lang].headline} <span>${t[lang].headlineSpan}</span>`;
-          headlineEl.classList.remove("out");
-        }, 150);
+        headlineEl.innerHTML = `${t[lang].headline} <span>${t[lang].headlineSpan}</span>`;
       }
 
       for (const [id, key] of Object.entries(elements)) {
         if (!key) continue;
         const el = document.getElementById(id);
         if (el && t[lang][key]) {
-          el.classList.add("out");
-          setTimeout(() => {
-            el.textContent = t[lang][key];
-            el.classList.remove("out");
-          }, 150);
+          el.textContent = t[lang][key];
         }
       }
 
       const whyListEl = document.getElementById("why-list");
       if (whyListEl && t[lang].whyList) {
-        whyListEl.classList.add("out");
-        setTimeout(() => {
-          whyListEl.innerHTML = t[lang].whyList.map(item => `<li>${item}</li>`).join("");
-          whyListEl.classList.remove("out");
-        }, 150);
-      }
-    }
-
-    
-    function defilarFAQ(direccion) {
-      const slider = document.getElementById('faqSlider');
-      if (slider) {
-        slider.scrollBy({ left: direccion * 330, behavior: 'smooth' });
+        whyListEl.innerHTML = t[lang].whyList.map(item => `<li>${item}</li>`).join("");
       }
     }
 
