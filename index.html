@@ -22,7 +22,7 @@
 
   <!-- Open Graph -->
   <meta property="og:locale" content="fr_CA" />
-  <meta property="og:title" content="Winlab | Réparation de Cellulaires, PC & Consoles | Experts" />
+  <meta property="og:title" content="Winlab | Réparation de Cellulaires, PC & Consoles | Experts Certifiés" />
   <meta property="og:description" content="Service rapide et garanti de réparation d'appareils électroniques. Écrans Soft OLED/OEM, batteries, micro-soudure et ordinateurs." />
   <meta property="og:image" content="https://www.winlab.ca/images/logo.jpg" />
   <meta property="og:image:width" content="1200" />
@@ -268,20 +268,85 @@
     .device-label { font-size: 12.5px; font-weight: 700; }
 
     /* FOTO REAL DU TALLER */
+
+    /* HERO SLIDER DE FOTOS */
     .hero-visual {
       position: relative;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.15);
       border: 1px solid var(--line-border);
-    }
-    .hero-visual img {
-      width: 100%;
       height: 460px;
+      background: #0f172a;
+    }
+    .hero-slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out;
+    }
+    .hero-slide.active {
+      opacity: 1;
+    }
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center center;
       display: block;
     }
+    .slider-arrow {
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      background: rgba(15, 23, 42, 0.6);
+      color: #ffffff;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 10;
+    }
+    .slider-arrow:hover { background: var(--brand-blue); }
+    .slider-arrow.prev { left: 12px; }
+    .slider-arrow.next { right: 12px; }
+
+    .slider-dots {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dot.active {
+      background: #ffffff;
+      width: 22px;
+      border-radius: 4px;
+    }
+
     .floating-guarantee-card {
       position: absolute;
       bottom: 20px;
@@ -645,18 +710,35 @@
           </div>
         </div>
 
-        <!-- FOTO REAL DEL TALLER WINLAB -->
-        <div class="hero-visual">
-          <img 
-            src="atelier.jpg" 
-            alt="Atelier de réparation électronique Winlab" 
-            onerror="this.src='749609078_122130982089104143_8684082060159100363_n.jpg'"
-            loading="lazy"
-          >
+        <!-- HERO SLIDER DE FOTOS DEL TALLER Y TRABAJOS -->
+        <div class="hero-visual" id="heroSlider">
+          <div class="hero-slides">
+            <div class="hero-slide active">
+              <img src="images/atelier.jpg" alt="Atelier Winlab - Poste de travail" onerror="this.src='atelier.jpg'" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="images/taller1.jpg" alt="Réparation de téléphone en cours" onerror="this.src='images/atelier.jpg'" loading="lazy">
+            </div>
+            <div class="hero-slide">
+              <img src="images/taller2.jpg" alt="Micro-soudure et diagnostic" onerror="this.src='images/atelier.jpg'" loading="lazy">
+            </div>
+          </div>
+          
+          <!-- Botones de navegación del slider -->
+          <button class="slider-arrow prev" onclick="moveSlide(-1)">‹</button>
+          <button class="slider-arrow next" onclick="moveSlide(1)">›</button>
+
+          <!-- Puntos indicadores -->
+          <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+
           <div class="floating-guarantee-card">
             <div class="guarantee-icon">🔬</div>
             <div class="guarantee-text">
-              <strong>Atelier Spécialisé & Certifié</strong>
+              <strong>Atelier Spécialisé</strong>
               <small>Microscope de précision, outillage professionnel et service garanti.</small>
             </div>
           </div>
@@ -1019,6 +1101,51 @@
         foot: "Open everyday | 8:00 AM–8:00 PM | 275 Rue Western, QC J0E 2N0 | +1 (450) 209-7144"
       }
     };
+
+
+    let currentSlideIndex = 0;
+    const slides = document.getElementsByClassName("hero-slide");
+    const dots = document.getElementsByClassName("dot");
+    let slideInterval;
+
+    function showSlide(index) {
+      if (!slides.length) return;
+      if (index >= slides.length) currentSlideIndex = 0;
+      if (index < 0) currentSlideIndex = slides.length - 1;
+      
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+        if (dots[i]) dots[i].classList.remove("active");
+      }
+      
+      slides[currentSlideIndex].classList.add("active");
+      if (dots[currentSlideIndex]) dots[currentSlideIndex].classList.add("active");
+    }
+
+    function moveSlide(n) {
+      clearInterval(slideInterval);
+      currentSlideIndex += n;
+      showSlide(currentSlideIndex);
+      startSlideTimer();
+    }
+
+    function currentSlide(n) {
+      clearInterval(slideInterval);
+      currentSlideIndex = n;
+      showSlide(currentSlideIndex);
+      startSlideTimer();
+    }
+
+    function startSlideTimer() {
+      slideInterval = setInterval(() => {
+        currentSlideIndex++;
+        showSlide(currentSlideIndex);
+      }, 4500);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      startSlideTimer();
+    });
 
     function defilarFAQ(direccion) {
       const slider = document.getElementById('faqSlider');
